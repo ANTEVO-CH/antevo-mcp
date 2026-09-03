@@ -1,0 +1,15 @@
+What the MIT licence in this repository covers
+==============================================
+
+The LICENSE file is unmodified MIT so that licence detectors and marketplace
+review recognise it. This note records what it applies to; it does not amend it.
+
+Covered: the contents of this repository — connection metadata describing where
+the Antevo MCP servers live (registry manifests, the Gemini CLI extension
+descriptor, the Cursor plugin descriptor, install links and documentation).
+
+Not covered, because none of it is here: the Antevo services these files point
+at, the data they return, and the Antevo plugins and Agent Skills in
+ANTEVO-CH/plugins, which remain all rights reserved. Copying this repository
+gives you endpoint URLs that are already published on antevo.ch/mcp — it does
+not give you Antevo.
