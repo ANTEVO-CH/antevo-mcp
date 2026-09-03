@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ch.antevo/trademark",
+  "description": "Is that brand name taken? Screen the registers and check the opposition window. No account.",
+  "title": "Antevo Trademark",
+  "version": "1.0.0",
+  "websiteUrl": "https://antevo.ch/trademark",
+  "icons": [
+    {
+      "src": "https://antevo.ch/assets/antevo-symbol-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://trademark.antevo.ch/mcp"
+    }
+  ]
+}

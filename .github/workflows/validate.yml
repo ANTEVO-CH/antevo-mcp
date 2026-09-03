@@ -1,0 +1,49 @@
+name: validate
+
+# The whole repository is JSON that other people's marketplaces parse. A trailing
+# comma here is a rejected listing there, so parse every file on every push.
+on:
+  push:
+  pull_request:
+
+jobs:
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse every JSON file
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            if python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$f"; then
+              echo "ok   $f"
+            else
+              echo "FAIL $f"; fail=1
+            fi
+          done < <(find . -name '*.json' -not -path './.git/*')
+          exit $fail
+
+      - name: Registry manifests must match what is published
+        run: |
+          # These files are a mirror. If they drift from the live registry, the
+          # repository is quietly advertising something that is not true.
+          curl -sS "https://registry.modelcontextprotocol.io/v0/servers?search=antevo" -o /tmp/live.json
+          python3 - <<'PY'
+          import json, glob, sys
+          live = {s["server"]["name"]: s["server"] for s in json.load(open("/tmp/live.json"))["servers"]}
+          bad = 0
+          for path in sorted(glob.glob("registry/*/server.json")):
+              local = json.load(open(path))
+              name = local["name"]
+              if name not in live:
+                  print(f"FAIL {path}: {name} is not in the live registry"); bad = 1; continue
+              for field in ("version", "remotes"):
+                  if local.get(field) != live[name].get(field):
+                      print(f"FAIL {path}: {field} differs from the published entry")
+                      print(f"      local={local.get(field)}")
+                      print(f"      live ={live[name].get(field)}")
+                      bad = 1
+              if not bad:
+                  print(f"ok   {path} matches {name} v{live[name]['version']}")
+          sys.exit(bad)
+          PY

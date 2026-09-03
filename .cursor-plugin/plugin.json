@@ -1,0 +1,22 @@
+{
+  "name": "antevo",
+  "description": "Markets, world risk, trademarks and your own portfolio. Executive and Trademark are public and need no account; Wealth signs you in to read your own book. Every tool is read-only and every answer carries its source and date.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Antevo"
+  },
+  "logo": "https://antevo.ch/assets/antevo-symbol-512.png",
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp",
+  "mcpServers": {
+    "antevo-executive": {
+      "url": "https://api.antevo.ch/mcp/executive/mcp"
+    },
+    "antevo-trademark": {
+      "url": "https://trademark.antevo.ch/mcp"
+    },
+    "antevo-wealth": {
+      "url": "https://api.antevo.ch/mcp/wealth/mcp"
+    }
+  }
+}

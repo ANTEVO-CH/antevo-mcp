@@ -1,0 +1,16 @@
+{
+  "name": "antevo",
+  "version": "1.0.0",
+  "description": "Markets, world risk, trademarks and your own portfolio — read-only intelligence from the Antevo desk.",
+  "mcpServers": {
+    "antevo-executive": {
+      "httpUrl": "https://api.antevo.ch/mcp/executive/mcp"
+    },
+    "antevo-trademark": {
+      "httpUrl": "https://trademark.antevo.ch/mcp"
+    },
+    "antevo-wealth": {
+      "httpUrl": "https://api.antevo.ch/mcp/wealth/mcp"
+    }
+  }
+}
