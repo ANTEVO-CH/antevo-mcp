@@ -1,0 +1,16 @@
+{
+  "name": "antevo-trademark",
+  "displayName": "Antevo Trademark",
+  "version": "1.0.0",
+  "description": "Screen a brand name across twenty trademark registers and get the opposition window for each office, with the provision it comes from. Public — no account, no key. Read-only.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/mcp"
+  },
+  "license": "MIT",
+  "keywords": ["mcp", "trademark", "brand", "legal", "ip", "opposition"],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

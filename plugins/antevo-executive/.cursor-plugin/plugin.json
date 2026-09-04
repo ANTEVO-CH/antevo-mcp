@@ -1,0 +1,16 @@
+{
+  "name": "antevo-executive",
+  "displayName": "Antevo Executive Brief",
+  "version": "1.0.0",
+  "description": "Markets, the daily editorial read, risk radar, geopolitics and macro history. Public — no account, no key. Every tool is read-only and every answer carries its source and its date.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/mcp"
+  },
+  "license": "MIT",
+  "keywords": ["mcp", "markets", "research", "geopolitics", "macro", "risk"],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

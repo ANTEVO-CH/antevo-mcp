@@ -1,0 +1,16 @@
+{
+  "name": "antevo-wealth",
+  "displayName": "Antevo Wealth",
+  "version": "1.0.0",
+  "description": "Your own household — positions, allocation, AUM, drift, real assets and compliance breaches. Signs you in over OAuth 2.1 and reads your book and nothing else. Read-only: no tool here can place a trade or move money.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/mcp"
+  },
+  "license": "MIT",
+  "keywords": ["mcp", "portfolio", "wealth", "investing", "allocation"],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}
