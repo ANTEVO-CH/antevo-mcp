@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "antevo-executive": {
+      "url": "https://api.antevo.ch/mcp/executive/mcp"
+    }
+  }
+}

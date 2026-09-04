@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "antevo-wealth": {
+      "url": "https://api.antevo.ch/mcp/wealth/mcp"
+    }
+  }
+}

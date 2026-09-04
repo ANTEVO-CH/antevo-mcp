@@ -17,6 +17,10 @@ Every tool is read-only. Every answer carries its source and its date.
 See **[INSTALL.md](INSTALL.md)** for one-click links, or paste a URL into any MCP client —
 Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Windsurf, Zed, Goose.
 
+**Cursor** — search the marketplace for Antevo, or install a plugin from this repo
+directly. The three connectors are three separate plugins under `plugins/`, so you
+can take only the one you want.
+
 **Gemini CLI**
 
 ```
@@ -79,3 +83,19 @@ they are the published record, not a draft.
 ## Links
 
 [antevo.ch/mcp](https://antevo.ch/mcp) · [Security](SECURITY.md) · contact@antevo.ch
+
+## Layout
+
+```
+.cursor-plugin/marketplace.json     the three plugins, for the Cursor marketplace
+plugins/antevo-executive/           .cursor-plugin/plugin.json + mcp.json
+plugins/antevo-trademark/
+plugins/antevo-wealth/
+registry/*/server.json              mirrors of the live MCP registry entries
+gemini-extension.json               Gemini CLI
+```
+
+This layout is Cursor's, not ours — see
+[cursor/plugin-template](https://github.com/cursor/plugin-template). CI runs their
+validator against this repo on every push, so a change that would be rejected at
+submission fails here first.

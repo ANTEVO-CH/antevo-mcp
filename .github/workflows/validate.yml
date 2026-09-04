@@ -23,6 +23,19 @@ jobs:
           done < <(find . -name '*.json' -not -path './.git/*')
           exit $fail
 
+      # Cursor's own validator, fetched from cursor/plugin-template, run against
+      # this repo. The layout is theirs, not ours: .cursor-plugin/marketplace.json
+      # enumerates plugins[], each with its own plugins/<name>/.cursor-plugin/
+      # plugin.json and mcp.json. The first version of this repo guessed — a
+      # single root plugin.json with mcpServers inline — and would have been
+      # rejected, and would have yielded ONE listing instead of three. Run the
+      # real thing rather than guess again.
+      - name: Cursor marketplace layout
+        run: |
+          curl -sS -o /tmp/validate-template.mjs \
+            https://raw.githubusercontent.com/cursor/plugin-template/main/scripts/validate-template.mjs
+          node /tmp/validate-template.mjs
+
       - name: Registry manifests must match what is published
         run: |
           # These files are a mirror. If they drift from the live registry, the
