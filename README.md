@@ -1,124 +1,124 @@
-# Antevo MCP
+![Antevo: a question field cycling through questions your assistant can now answer, beside a lens where signals from the world travel inward to you](assets/cover.svg)
 
-**Markets, world risk, crypto prices, trademarks, your own portfolio and your firm's client book — inside the AI you already use.**
+# Antevo MCP: five remote MCP servers for markets, trademarks, crypto, wealth and mandates
 
-Five remote MCP servers. Three of them need no account.
+**Antevo's connections, for any assistant that speaks MCP.** The Executive Brief and its dated archive, the trademark registers, crypto reference prices, your own household and your firm's client book — five remote servers over Streamable HTTP. Three need no account. There is nothing to download and nothing to run.
 
-| | | |
-|---|---|---|
-| **Executive** | `https://api.antevo.ch/mcp/executive/mcp` | Public — no account |
-| **Trademark** | `https://trademark.antevo.ch/mcp` | Public — no account |
-| **Crypto** | `https://api.antevo.ch/mcp/crypto/mcp` | Public — no account |
-| **Wealth** | `https://api.antevo.ch/mcp/wealth/mcp` | Sign in with Antevo Wealth |
-| **Mandates** | `https://api.antevo.ch/mcp/mandates/mcp` | Sign in with an Antevo Mandates firm account |
+[![validate](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-ch.antevo-252c28?labelColor=9b7936)](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo)
+[![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-252c28?labelColor=9b7936)](#the-servers)
+[![npm](https://img.shields.io/npm/v/@antevo/cli?label=%40antevo%2Fcli&color=252c28&labelColor=9b7936)](https://www.npmjs.com/package/@antevo/cli)
+[![License: MIT](https://img.shields.io/badge/license-MIT-252c28?labelColor=9b7936)](LICENSE)
 
-Executive, Trademark, Crypto and Wealth are read-only, and every answer carries its source and its date.
-Mandates also writes to your own firm's client book, and asks for confirmation before anything
-irreversible. No tool on any of them can place a trade or move money.
+### Why Antevo
 
-## Install
+- **A named desk, not a web search.** Answers come from Antevo's published Executive Brief, the trademark registers themselves, and — when you sign in — your own record, with the date on every read.
+- **Public where it can be, permissioned where it matters.** Executive, trademark screening and crypto reach no personal data. Wealth and Mandates sign in over OAuth 2.1 with PKCE.
+- **Intelligence, not advice.** Nothing here places a trade or moves money.
 
-See **[INSTALL.md](INSTALL.md)** for one-click links, or paste a URL into any MCP client —
-Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Windsurf, Zed, Goose.
+![How a question travels: your assistant speaks MCP to five Antevo connections, which draw on the Antevo desk and return an answer with the record behind it](assets/connections.svg)
 
-**Cursor** — search the marketplace for Antevo, or install a plugin from this repo
-directly. The five connectors are five separate plugins under `plugins/`, so you
-can take only the one you want.
+## Table of Contents
 
-**Gemini CLI**
+- [The servers](#the-servers)
+- [Install in your client](#install-in-your-client)
+- [Quick Start](#quick-start)
+- [Authentication](#authentication)
+- [What this repository is](#what-this-repository-is)
+- [Registry](#registry)
+- [FAQ](#faq)
+- [Security](#security)
+- [License](#license)
 
+## The servers
+
+| | Server | Address | Access | Tools |
+|:--|:--|:--|:--|--:|
+| **I.** | **Executive** — the daily editorial read, risk radar, forward calendar, dated archive, desk reads, world-events map, macro-economic history | `https://api.antevo.ch/mcp/executive/mcp` | Public | 15 |
+| **II.** | **Trademark** — screen a name, read a holder's filing pattern, check an opposition window | `https://trademark.antevo.ch/mcp` | Public screening | 4 |
+| **III.** | **Crypto** — one reference price per major pair, daily history, technical signals | `https://api.antevo.ch/mcp/crypto/mcp` | Public | 4 |
+| **IV.** | **Wealth** — your household: holdings, allocation, risk, real assets, liabilities, goals, documents | `https://api.antevo.ch/mcp/wealth/mcp` | Your account | 36 |
+| **V.** | **Mandates** — your firm's client book: clients, reviews, meeting briefs, goals, documents, succession | `https://api.antevo.ch/mcp/mandates/mcp` | By arrangement | 24 |
+
+Tool counts are read live from each server's `tools/list`. Every Wealth tool is read-only; Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
+
+## Install in your client
+
+| Client | How |
+|:--|:--|
+| **Claude** — Code, Desktop, claude.ai | `/plugin marketplace add ANTEVO-CH/plugins`, then `/plugin install antevo-executive@antevo` — each connection with its skills. See [ANTEVO-CH/plugins](https://github.com/ANTEVO-CH/plugins). |
+| **Cursor** | One click from [INSTALL.md](INSTALL.md), or install a plugin from [`plugins/`](plugins) — five plugins, take only what you need. |
+| **VS Code** | One click from [INSTALL.md](INSTALL.md). |
+| **Gemini CLI** | `gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp` |
+| **Windsurf, Zed, Goose, any MCP client** | Paste an address from [the servers](#the-servers) as a remote Streamable HTTP server. |
+| **A terminal** | `npx @antevo/cli brief` — see [ANTEVO-CH/cli](https://github.com/ANTEVO-CH/cli). |
+
+## Quick Start
+
+```text
+What happened in markets today, and what does the desk make of it?     → Executive
+What could go wrong from here — and what would settle it?               → Executive
+Has anyone filed anything close to "Novara"?                             → Trademark
+Is bitcoin above its 200-day average?                                    → Crypto
+Where am I concentrated?                                                 → Wealth, after sign-in
+Which clients are due a review this month?                               → Mandates, after sign-in
 ```
-gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp
-```
 
-**Anything else** — the servers speak Streamable HTTP at the URLs above. There is nothing to
-download and nothing to run locally.
+## Authentication
 
-## What you can ask
-
-**Executive** — public
-- What happened in markets today, and what does the desk think it means?
-- What is on the risk radar right now, and what would prove it wrong?
-- Which catalysts land in the next two weeks?
-- Show me Swiss inflation since 1990.
-
-**Trademark** — public
-- Is "Meridian" taken as a brand name?
-- Which Nice classes does a business like mine file in?
-- How long do I have to oppose a filing at the EUIPO, and from when?
-- Who holds this mark, and how do they behave?
-
-**Crypto** — public
-- What is bitcoin worth, and how did it move on the day?
-- How has ETH/EUR moved over the last quarter?
-- What does the technical picture look like for SOL/USD?
-- Which pairs does Antevo price?
-
-One composite reference price per pair across major exchanges — whole UTC days, not a live
-or tradable quote.
-
-**Wealth** — after sign-in, scoped to your own household
-- What is my brief today?
-- What is my total AUM?
-- Where am I concentrated?
-- What real assets do I hold?
-
-**Mandates** — after sign-in, scoped to your own firm
-- Which clients are due a review?
-- Prepare a meeting brief for this client.
-- Which clients have incomplete succession planning?
-- Record that this review is done and schedule the next one.
+- **Executive, Trademark screening and Crypto** need no token. They are rate-limited per client and hold no personal data.
+- **Wealth and Mandates** use OAuth 2.1 with PKCE and Dynamic Client Registration. Discovery is open — `initialize`, `tools/list` and `ping` answer without a token, so a client can inspect the surface before anyone signs in. Any `tools/call` without a token answers `401` with an RFC 9728 `WWW-Authenticate` challenge, and a compliant client completes sign-in on its own.
+- Your assistant receives a scoped, short-lived token — never your password — and your account's own permissions apply.
 
 ## What this repository is
 
-Connection metadata, and nothing else: the registry manifests, the Gemini extension
-descriptor and the Cursor plugin descriptor that tell a client where the Antevo servers
-live. There is no application code here, no data, and no business logic — the servers
-themselves are hosted by Antevo and are not open source.
+Connection metadata, and nothing else. There is no application code, no data and no business logic here — the servers are hosted by Antevo and are not open source.
 
-It is MIT licensed because a URL and a description are not worth protecting, and because
-several marketplaces require the listed repository to be open. The Antevo plugins and
-Agent Skills live in [ANTEVO-CH/plugins](https://github.com/ANTEVO-CH/plugins) and remain
-all rights reserved.
+| Path | What it is |
+|:--|:--|
+| [`registry/*/server.json`](registry) | Mirrors of the five published [MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo) entries |
+| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The five plugins, for the Cursor marketplace |
+| [`plugins/antevo-*/`](plugins) | Each plugin's `.cursor-plugin/plugin.json`, `mcp.json`, README and logo |
+| [`gemini-extension.json`](gemini-extension.json) | Makes this repository a Gemini CLI extension |
+| [`INSTALL.md`](INSTALL.md) | One-click install links for Cursor and VS Code |
 
-```
-registry/*/server.json        Official MCP Registry manifests (mirrors of what is live)
-gemini-extension.json         Makes this repo a Gemini CLI extension
-.cursor-plugin/plugin.json    Cursor plugin descriptor
-INSTALL.md                    Generated one-click install links
-```
+CI runs on every push: every JSON file parses, Cursor's own [plugin-template validator](https://github.com/cursor/plugin-template) passes, and each `registry/*/server.json` still matches what is published.
 
 ## Registry
 
-All five servers are listed in the official MCP Registry and active:
+All five servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
 
-- `ch.antevo/executive`
-- `ch.antevo/trademark`
-- `ch.antevo/crypto`
-- `ch.antevo/wealth`
-- `ch.antevo/mandates`
+`ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/crypto` · `ch.antevo/wealth` · `ch.antevo/mandates`
 
-The files under `registry/` mirror those entries. If you change one, change it there too —
-they are the published record, not a draft.
+## FAQ
 
-## Links
+### Do I need an account?
 
-[antevo.ch/mcp](https://antevo.ch/mcp) · [Security](SECURITY.md) · contact@antevo.ch
+Not for Executive, trademark screening or crypto. Wealth needs an [Antevo Wealth](https://antevo.ch/wealth) account; Mandates needs a firm account, [by arrangement](https://antevo.ch/mandate).
 
-## Layout
+### Why is Trademark on a different host?
 
-```
-.cursor-plugin/marketplace.json     the five plugins, for the Cursor marketplace
-plugins/antevo-executive/           .cursor-plugin/plugin.json + mcp.json
-plugins/antevo-trademark/
-plugins/antevo-crypto/
-plugins/antevo-wealth/
-plugins/antevo-mandates/
-registry/*/server.json              mirrors of the live MCP registry entries
-gemini-extension.json               Gemini CLI
-```
+It runs as a separate service at `trademark.antevo.ch`. It speaks Streamable HTTP only.
 
-This layout is Cursor's, not ours — see
-[cursor/plugin-template](https://github.com/cursor/plugin-template). CI runs their
-validator against this repo on every push, so a change that would be rejected at
-submission fails here first.
+### What does my assistant receive?
+
+The information a server returns to your question. Your chosen AI service handles it under its own terms.
+
+### Does Antevo give investment advice?
+
+No. It is editorial market intelligence, public-register data, reference prices and a reading of your own record. Technical signals say how indicators lean, never buy or sell.
+
+## Security
+
+Report a vulnerability privately to **contact@antevo.ch** — see [SECURITY.md](SECURITY.md).
+
+## License
+
+The contents of this repository are MIT licensed — see [LICENSE](LICENSE) and [NOTICE](NOTICE). The Antevo services these files point at, and the Claude plugins and skills in [ANTEVO-CH/plugins](https://github.com/ANTEVO-CH/plugins), are not covered.
+
+---
+
+<p align="center">
+  <b>Antevo</b> · Switzerland · <a href="https://antevo.ch">antevo.ch</a> · <a href="https://antevo.ch/mcp">Connect</a> · <a href="mailto:contact@antevo.ch">contact@antevo.ch</a><br>
+  <sub>Intelligence, not advice.</sub>
+</p>
