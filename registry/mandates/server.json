@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ch.antevo/mandates",
+  "description": "Your client book: who is due a review, what their mandate allows, and what has moved.",
+  "title": "Antevo Mandates",
+  "version": "1.0.0",
+  "websiteUrl": "https://antevo.ch/mandate",
+  "icons": [
+    {
+      "src": "https://antevo.ch/assets/antevo-symbol-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.antevo.ch/mcp/mandates/mcp"
+    },
+    {
+      "type": "sse",
+      "url": "https://api.antevo.ch/mcp/mandates/sse"
+    }
+  ]
+}

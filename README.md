@@ -1,16 +1,20 @@
 # Antevo MCP
 
-**Markets, world risk, trademarks and your own portfolio — inside the AI you already use.**
+**Markets, world risk, crypto prices, trademarks, your own portfolio and your firm's client book — inside the AI you already use.**
 
-Three remote MCP servers. Two of them need no account.
+Five remote MCP servers. Three of them need no account.
 
 | | | |
 |---|---|---|
 | **Executive** | `https://api.antevo.ch/mcp/executive/mcp` | Public — no account |
 | **Trademark** | `https://trademark.antevo.ch/mcp` | Public — no account |
+| **Crypto** | `https://api.antevo.ch/mcp/crypto/mcp` | Public — no account |
 | **Wealth** | `https://api.antevo.ch/mcp/wealth/mcp` | Sign in with Antevo Wealth |
+| **Mandates** | `https://api.antevo.ch/mcp/mandates/mcp` | Sign in with an Antevo Mandates firm account |
 
-Every tool is read-only. Every answer carries its source and its date.
+Executive, Trademark, Crypto and Wealth are read-only, and every answer carries its source and its date.
+Mandates also writes to your own firm's client book, and asks for confirmation before anything
+irreversible. No tool on any of them can place a trade or move money.
 
 ## Install
 
@@ -18,7 +22,7 @@ See **[INSTALL.md](INSTALL.md)** for one-click links, or paste a URL into any MC
 Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Windsurf, Zed, Goose.
 
 **Cursor** — search the marketplace for Antevo, or install a plugin from this repo
-directly. The three connectors are three separate plugins under `plugins/`, so you
+directly. The five connectors are five separate plugins under `plugins/`, so you
 can take only the one you want.
 
 **Gemini CLI**
@@ -44,11 +48,26 @@ download and nothing to run locally.
 - How long do I have to oppose a filing at the EUIPO, and from when?
 - Who holds this mark, and how do they behave?
 
+**Crypto** — public
+- What is bitcoin worth, and how did it move on the day?
+- How has ETH/EUR moved over the last quarter?
+- What does the technical picture look like for SOL/USD?
+- Which pairs does Antevo price?
+
+One composite reference price per pair across major exchanges — whole UTC days, not a live
+or tradable quote.
+
 **Wealth** — after sign-in, scoped to your own household
 - What is my brief today?
 - What is my total AUM?
 - Where am I concentrated?
 - What real assets do I hold?
+
+**Mandates** — after sign-in, scoped to your own firm
+- Which clients are due a review?
+- Prepare a meeting brief for this client.
+- Which clients have incomplete succession planning?
+- Record that this review is done and schedule the next one.
 
 ## What this repository is
 
@@ -71,11 +90,13 @@ INSTALL.md                    Generated one-click install links
 
 ## Registry
 
-All three servers are listed in the official MCP Registry and active:
+All five servers are listed in the official MCP Registry and active:
 
 - `ch.antevo/executive`
 - `ch.antevo/trademark`
+- `ch.antevo/crypto`
 - `ch.antevo/wealth`
+- `ch.antevo/mandates`
 
 The files under `registry/` mirror those entries. If you change one, change it there too —
 they are the published record, not a draft.
@@ -87,10 +108,12 @@ they are the published record, not a draft.
 ## Layout
 
 ```
-.cursor-plugin/marketplace.json     the three plugins, for the Cursor marketplace
+.cursor-plugin/marketplace.json     the five plugins, for the Cursor marketplace
 plugins/antevo-executive/           .cursor-plugin/plugin.json + mcp.json
 plugins/antevo-trademark/
+plugins/antevo-crypto/
 plugins/antevo-wealth/
+plugins/antevo-mandates/
 registry/*/server.json              mirrors of the live MCP registry entries
 gemini-extension.json               Gemini CLI
 ```

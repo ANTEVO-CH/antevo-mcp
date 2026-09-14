@@ -1,0 +1,16 @@
+{
+  "name": "antevo-mandates",
+  "displayName": "Antevo Mandates",
+  "version": "1.0.0",
+  "description": "Your firm's client book — who is due a review, meeting briefs, succession gaps, goals, documents and client email. Signs you in over OAuth 2.1 and reaches your own firm and nothing else. It can record reviews and update client records; irreversible actions ask for confirmation first.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/mcp"
+  },
+  "license": "MIT",
+  "keywords": ["mcp", "wealth-management", "eam", "family-office", "compliance"],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/mandate",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

@@ -9,17 +9,26 @@ Do not open a public issue for a suspected vulnerability.
 
 ## What these servers do
 
-All three are **read-only**. No tool exposed on the public Executive and Trademark servers,
-or on the aggregated Wealth connector, can create, modify or delete anything.
+**Executive**, **Trademark** and **Crypto** are public and **read-only**. They serve published
+editorial data, public-register data and market prices, carry no personal data and need no
+account. Crypto publishes a composite reference price and does not list its sources.
 
-**Executive** and **Trademark** serve published editorial and public-register data. They
-carry no personal data and need no account.
+**Wealth** is **read-only**. No tool on the aggregated Wealth connector can create, modify or
+delete anything. It serves one signed-in customer their own household's records, over OAuth
+2.1 with PKCE.
 
-**Wealth** serves one signed-in customer their own household's records, over OAuth 2.1 with
-PKCE. Discovery is deliberately open — `initialize`, `tools/list` and `ping` answer without
-a token, so the tool surface can be inspected before anyone signs in. Everything that
-reaches data requires a token: any `tools/call`, resource read or prompt read answers `401`
-with the RFC 9728 `WWW-Authenticate` challenge that begins the authorization flow.
+**Mandates** serves one signed-in firm its own client book over the same OAuth 2.1 flow, and it
+is **not** read-only: it can create and update client records, goals and documents. Irreversible
+actions — converting a prospect, deleting a document — return a plan first and run only when
+called again with confirmation.
+
+No tool on any of the five can place a trade or move money.
+
+For Wealth and Mandates, discovery is deliberately open — `initialize`, `tools/list` and
+`ping` answer without a token, so the tool surface can be inspected before anyone signs in.
+Everything that reaches data requires a token: any `tools/call`, resource read or prompt read
+answers `401` with the RFC 9728 `WWW-Authenticate` challenge that begins the authorization
+flow.
 
 ## Scope
 
