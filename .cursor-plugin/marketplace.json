@@ -5,8 +5,8 @@
     "email": "contact@antevo.ch"
   },
   "metadata": {
-    "description": "Antevo's MCP connectors: markets and world risk, crypto reference prices, trademark registers, your own portfolio and your firm's client book.",
-    "version": "1.1.0",
+    "description": "Antevo's MCP connectors: markets and world risk, trademark registers, your own portfolio and your firm's client book.",
+    "version": "1.2.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
@@ -19,11 +19,6 @@
       "name": "antevo-trademark",
       "source": "antevo-trademark",
       "description": "Screen a brand name across twenty registers, with the opposition window for each office. Public — no account."
-    },
-    {
-      "name": "antevo-crypto",
-      "source": "antevo-crypto",
-      "description": "One reference price per major crypto pair, with daily history and technical signals. Public — no account."
     },
     {
       "name": "antevo-wealth",

@@ -1,16 +1,13 @@
 {
   "name": "antevo",
-  "version": "1.1.0",
-  "description": "Markets, world risk, crypto prices, trademarks, your own portfolio and your firm's client book — from the Antevo desk.",
+  "version": "1.2.0",
+  "description": "Markets, world risk, trademarks, your own portfolio and your firm's client book — from the Antevo desk.",
   "mcpServers": {
     "antevo-executive": {
       "httpUrl": "https://api.antevo.ch/mcp/executive/mcp"
     },
     "antevo-trademark": {
       "httpUrl": "https://trademark.antevo.ch/mcp"
-    },
-    "antevo-crypto": {
-      "httpUrl": "https://api.antevo.ch/mcp/crypto/mcp"
     },
     "antevo-wealth": {
       "httpUrl": "https://api.antevo.ch/mcp/wealth/mcp"
