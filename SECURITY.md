@@ -9,9 +9,8 @@ Do not open a public issue for a suspected vulnerability.
 
 ## What these servers do
 
-**Executive**, **Trademark** and **Crypto** are public and **read-only**. They serve published
-editorial data, public-register data and market prices, carry no personal data and need no
-account. Crypto publishes a composite reference price and does not list its sources.
+**Executive** and **Trademark** are public and **read-only**. They serve published editorial
+data, public-register data and market prices, carry no personal data and need no account.
 
 **Wealth** is **read-only**. No tool on the aggregated Wealth connector can create, modify or
 delete anything. It serves one signed-in customer their own household's records, over OAuth
@@ -22,7 +21,7 @@ is **not** read-only: it can create and update client records, goals and documen
 actions — converting a prospect, deleting a document — return a plan first and run only when
 called again with confirmation.
 
-No tool on any of the five can place a trade or move money.
+No tool on any of the four can place a trade or move money.
 
 For Wealth and Mandates, discovery is deliberately open — `initialize`, `tools/list` and
 `ping` answer without a token, so the tool surface can be inspected before anyone signs in.
