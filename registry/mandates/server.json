@@ -1,10 +1,14 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "ch.antevo/mandates",
-  "description": "Your client book: who is due a review, what their mandate allows, and what has moved.",
   "title": "Antevo Mandates",
-  "version": "1.0.0",
+  "description": "Your client book: who is due a review, what their mandate allows, and what has moved.",
+  "version": "1.0.1",
   "websiteUrl": "https://antevo.ch/mandate",
+  "repository": {
+    "url": "https://github.com/ANTEVO-CH/antevo-mcp",
+    "source": "github"
+  },
   "icons": [
     {
       "src": "https://antevo.ch/assets/antevo-symbol-512.png",
