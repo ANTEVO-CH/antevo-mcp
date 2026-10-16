@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "the-0700-brief": {
+      "url": "https://api.antevo.ch/mcp/0700/mcp"
+    }
+  }
+}
