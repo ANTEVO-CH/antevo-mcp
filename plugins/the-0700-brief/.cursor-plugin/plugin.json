@@ -1,0 +1,24 @@
+{
+  "name": "the-0700-brief",
+  "displayName": "The 07:00 Brief",
+  "version": "1.0.0",
+  "description": "Your agent knows the markets by 07:00, every day. We read them so you don't have to. The daily brief, Market Map, Big Picture, Three Minute Brief, Risk Radar and sector notes. Public — no account, no key. Read-only; editorial commentary, not investment advice.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "markets",
+    "daily-brief",
+    "news",
+    "macro",
+    "geopolitics",
+    "risk"
+  ],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

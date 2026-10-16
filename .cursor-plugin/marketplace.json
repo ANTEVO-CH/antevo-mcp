@@ -5,11 +5,16 @@
     "email": "contact@antevo.ch"
   },
   "metadata": {
-    "description": "Antevo's MCP connectors: markets and world risk, trademark registers, your own portfolio and your firm's client book.",
-    "version": "1.2.0",
+    "description": "Antevo's MCP connectors: the morning brief, markets and world risk, trademark registers, your own portfolio and your firm's client book.",
+    "version": "1.3.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
+    {
+      "name": "the-0700-brief",
+      "source": "the-0700-brief",
+      "description": "Your agent knows the markets by 07:00: the daily brief, Market Map, Risk Radar and sector notes. Public — no account."
+    },
     {
       "name": "antevo-executive",
       "source": "antevo-executive",

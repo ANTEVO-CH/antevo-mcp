@@ -43,7 +43,13 @@ jobs:
           curl -sS "https://registry.modelcontextprotocol.io/v0/servers?search=antevo" -o /tmp/live.json
           python3 - <<'PY'
           import json, glob, sys
-          live = {s["server"]["name"]: s["server"] for s in json.load(open("/tmp/live.json"))["servers"]}
+          # A search returns every published version; compare against the one the
+          # registry marks latest, or a stale 1.0.0 can shadow the current 1.0.1.
+          live = {}
+          for s in json.load(open("/tmp/live.json"))["servers"]:
+              meta = s.get("_meta", {}).get("io.modelcontextprotocol.registry/official", {})
+              if meta.get("isLatest", True):
+                  live[s["server"]["name"]] = s["server"]
           bad = 0
           for path in sorted(glob.glob("registry/*/server.json")):
               local = json.load(open(path))
