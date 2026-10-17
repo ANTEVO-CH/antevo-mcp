@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "antevo-executive",
+  "version": "1.0.0",
+  "description": "Antevo's daily markets, macro and world-events briefing: the market regime, themes and risks, catalysts, a risk radar, macro history and per-country world-events drilldowns. Every answer names the dated edition behind it. Public, no account. Intelligence, not investment advice.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch"
+  },
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "markets",
+    "macro",
+    "economy",
+    "geopolitics",
+    "risk-radar",
+    "catalysts"
+  ]
+}

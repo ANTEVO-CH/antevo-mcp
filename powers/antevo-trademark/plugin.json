@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "antevo-trademark",
+  "version": "1.0.0",
+  "description": "Check a brand name against 50+ national and regional trademark registers, not only the US. See which Nice classes a business files in, how a holder files, and each office's opposition deadline with the provision it comes from. Public screening, no account.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch"
+  },
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "trademark",
+    "brand-name",
+    "naming",
+    "intellectual-property",
+    "euipo",
+    "wipo"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "the-0700-brief",
+  "version": "1.0.0",
+  "description": "Your agent knows the markets by 07:00, every day. Antevo's morning read on markets and the world: what moved, what it means, what to watch today and the risks building underneath, with the Market Map, Big Picture, Three Minute Brief, Risk Radar and sector notes. Public, no account. Editorial commentary, not investment advice.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch"
+  },
+  "homepage": "https://antevo.ch/mcp",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "markets",
+    "morning-brief",
+    "market-news",
+    "risk-radar",
+    "macro",
+    "geopolitics"
+  ]
+}
