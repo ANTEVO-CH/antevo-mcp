@@ -28,6 +28,7 @@
 - [What this repository is](#what-this-repository-is)
 - [Registry](#registry)
 - [FAQ](#faq)
+- [Privacy and support](#privacy-and-support)
 - [Security](#security)
 - [License](#license)
 
@@ -65,6 +66,7 @@ The brief is out around 07:00 Zurich time; in Asia, pick a time after 14:00 Sing
 | **Cursor** | One click from [INSTALL.md](INSTALL.md), or install a plugin from [`plugins/`](plugins) — five plugins, take only what you need. |
 | **VS Code** | One click from [INSTALL.md](INSTALL.md). |
 | **Gemini CLI** | `gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp` |
+| **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has The 07:00 Brief, Executive and Trademark. |
 | **Windsurf, Zed, Goose, any MCP client** | Paste an address from [the servers](#the-servers) as a remote Streamable HTTP server. |
 | **A terminal** | `npx @antevo/cli brief` — see [ANTEVO-CH/cli](https://github.com/ANTEVO-CH/cli). |
 
@@ -94,10 +96,11 @@ Connection metadata, and nothing else. There is no application code, no data and
 | [`registry/*/server.json`](registry) | Mirrors of the five published [MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo) entries |
 | [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The five plugins, for the Cursor marketplace |
 | [`plugins/*/`](plugins) | Each plugin's `.cursor-plugin/plugin.json`, `mcp.json`, README and logo |
+| [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for the three public servers |
 | [`gemini-extension.json`](gemini-extension.json) | Makes this repository a Gemini CLI extension |
 | [`INSTALL.md`](INSTALL.md) | One-click install links for Cursor and VS Code |
 
-CI runs on every push: every JSON file parses, Cursor's own [plugin-template validator](https://github.com/cursor/plugin-template) passes, and each `registry/*/server.json` still matches what is published.
+CI runs on every push: every JSON file parses, Cursor's own [plugin-template validator](https://github.com/cursor/plugin-template) passes, each `powers/*/` manifest validates against the published Agent Plugins schemas, and each `registry/*/server.json` still matches what is published.
 
 ## Registry
 
@@ -122,6 +125,11 @@ The information a server returns to your question. Your chosen AI service handle
 ### Does Antevo give investment advice?
 
 No. It is editorial market intelligence, public-register data and a reading of your own record. Technical signals say how indicators lean, never buy or sell.
+
+## Privacy and support
+
+- Privacy policy: <https://antevo.ch/policies/privacy-policy>
+- Support: [contact@antevo.ch](mailto:contact@antevo.ch)
 
 ## Security
 

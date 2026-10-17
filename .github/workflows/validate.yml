@@ -36,6 +36,29 @@ jobs:
             https://raw.githubusercontent.com/cursor/plugin-template/main/scripts/validate-template.mjs
           node /tmp/validate-template.mjs
 
+      # Kiro reads powers/<name>/ in the Agent Plugins format, not Cursor's. Its
+      # schemas are closed (unknown keys fail) and a remote server needs an
+      # explicit "type", so validate against the published schemas themselves.
+      - name: Kiro powers match the Agent Plugins schemas
+        run: |
+          pip install --quiet jsonschema
+          for f in plugin mcp; do
+            curl -sSf -o /tmp/$f.schema.json https://agent-plugins.org/schemas/1.0.0/$f.schema.json
+          done
+          python3 - <<'PY'
+          import glob, json, sys, jsonschema
+          schemas = {f: json.load(open(f"/tmp/{f}.schema.json")) for f in ("plugin", "mcp")}
+          bad = 0
+          for path in sorted(glob.glob("powers/*/*.json")):
+              kind = "plugin" if path.endswith("plugin.json") else "mcp"
+              try:
+                  jsonschema.Draft202012Validator(schemas[kind]).validate(json.load(open(path)))
+                  print(f"ok   {path}")
+              except jsonschema.ValidationError as e:
+                  print(f"FAIL {path}: {e.message}"); bad = 1
+          sys.exit(bad)
+          PY
+
       - name: Registry manifests must match what is published
         run: |
           # These files are a mirror. If they drift from the live registry, the
