@@ -3,7 +3,7 @@
   "name": "ch.antevo/mandates",
   "title": "Antevo Mandates",
   "description": "Your client book: who is due a review, what their mandate allows, and what has moved.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "websiteUrl": "https://antevo.ch/mandate",
   "repository": {
     "url": "https://github.com/ANTEVO-CH/antevo-mcp",
@@ -22,10 +22,6 @@
     {
       "type": "streamable-http",
       "url": "https://api.antevo.ch/mcp/mandates/mcp"
-    },
-    {
-      "type": "sse",
-      "url": "https://api.antevo.ch/mcp/mandates/sse"
     }
   ]
 }
