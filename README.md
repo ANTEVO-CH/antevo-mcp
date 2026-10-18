@@ -63,7 +63,8 @@ The brief is out around 07:00 Zurich time; in Asia, pick a time after 14:00 Sing
 | Client | How |
 |:--|:--|
 | **Claude** — Code, Desktop, claude.ai | `/plugin marketplace add ANTEVO-CH/plugins`, then `/plugin install antevo-executive@antevo` — each connection with its skills. See [ANTEVO-CH/plugins](https://github.com/ANTEVO-CH/plugins). |
-| **Cursor** | One click from [INSTALL.md](INSTALL.md), or install a plugin from [`plugins/`](plugins) — five plugins, take only what you need. |
+| **Claude** — directory | One click: [The 07:00 Brief](https://claude.ai/directory/the-0700-brief), [Executive](https://claude.ai/directory/antevo-executive-brief), [Wealth](https://claude.ai/directory/antevo-wealth). |
+| **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — five plugins, take only what you need. |
 | **VS Code** | One click from [INSTALL.md](INSTALL.md). |
 | **Gemini CLI** | `gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp` |
 | **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has The 07:00 Brief, Executive and Trademark. |
