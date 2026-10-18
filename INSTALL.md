@@ -1,43 +1,98 @@
 # Install links
 
-One-click installs. Same five servers everywhere — nothing here is client-specific but the wrapper.
+Same five servers everywhere; only the wrapper changes. Every one is a remote Streamable HTTP server, so there is nothing to run locally.
+
+GitHub doesn't open app links (`cursor://`, `vscode:`), so the VS Code links below go through Microsoft's https redirect, and Cursor's one-click buttons are on [antevo.ch/mcp](https://antevo.ch/mcp/#connections). In Cursor you can also paste the [`mcp.json`](#cursor) below.
 
 ## The 07:00 Brief
 
 `https://api.antevo.ch/mcp/0700/mcp`
 
-- **Cursor** — [add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=the-0700-brief&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuYW50ZXZvLmNoL21jcC8wNzAwL21jcCJ9)
-- **VS Code** — [add to VS Code](vscode:mcp/install?%7B%22name%22%3A%20%22the-0700-brief%22%2C%20%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A//api.antevo.ch/mcp/0700/mcp%22%7D)
+Public, no account.
+
+- **Claude**: [open in Claude's directory](https://claude.ai/directory/the-0700-brief), then Connect
+- **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=the-0700-brief&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.antevo.ch%2Fmcp%2F0700%2Fmcp%22%7D)
+- **Cursor**: one click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), or the [`mcp.json`](#cursor) below
+- **Claude Code**: `claude mcp add --transport http the-0700-brief https://api.antevo.ch/mcp/0700/mcp`
 
 ## Antevo Executive Brief
 
 `https://api.antevo.ch/mcp/executive/mcp`
 
-- **Cursor** — [add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=antevo-executive&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuYW50ZXZvLmNoL21jcC9leGVjdXRpdmUvbWNwIn0=)
-- **VS Code** — [add to VS Code](vscode:mcp/install?%7B%22name%22%3A%20%22antevo-executive%22%2C%20%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A//api.antevo.ch/mcp/executive/mcp%22%7D)
+Public, no account.
+
+- **Claude**: [open in Claude's directory](https://claude.ai/directory/antevo-executive-brief), then Connect
+- **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=antevo-executive&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.antevo.ch%2Fmcp%2Fexecutive%2Fmcp%22%7D)
+- **Cursor**: one click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), or the [`mcp.json`](#cursor) below
+- **Claude Code**: `claude mcp add --transport http antevo-executive https://api.antevo.ch/mcp/executive/mcp`
 
 ## Antevo Trademark
 
 `https://trademark.antevo.ch/mcp`
 
-- **Cursor** — [add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=antevo-trademark&config=eyJ1cmwiOiAiaHR0cHM6Ly90cmFkZW1hcmsuYW50ZXZvLmNoL21jcCJ9)
-- **VS Code** — [add to VS Code](vscode:mcp/install?%7B%22name%22%3A%20%22antevo-trademark%22%2C%20%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A//trademark.antevo.ch/mcp%22%7D)
+Screening needs no account; the watchlist and investigations ask you to sign in.
+
+- **Claude**: Customize → Connectors → Add → Add custom connector, and paste the address
+- **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=antevo-trademark&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Ftrademark.antevo.ch%2Fmcp%22%7D)
+- **Cursor**: one click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), or the [`mcp.json`](#cursor) below
+- **Claude Code**: `claude mcp add --transport http antevo-trademark https://trademark.antevo.ch/mcp`
 
 ## Antevo Wealth
 
 `https://api.antevo.ch/mcp/wealth/mcp`
 
-- **Cursor** — [add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=antevo-wealth&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuYW50ZXZvLmNoL21jcC93ZWFsdGgvbWNwIn0=)
-- **VS Code** — [add to VS Code](vscode:mcp/install?%7B%22name%22%3A%20%22antevo-wealth%22%2C%20%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A//api.antevo.ch/mcp/wealth/mcp%22%7D)
+Your own household, after sign-in.
+
+- **Claude**: [open in Claude's directory](https://claude.ai/directory/antevo-wealth), then Connect
+- **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=antevo-wealth&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.antevo.ch%2Fmcp%2Fwealth%2Fmcp%22%7D)
+- **Cursor**: one click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), or the [`mcp.json`](#cursor) below
+- **Claude Code**: `claude mcp add --transport http antevo-wealth https://api.antevo.ch/mcp/wealth/mcp`
 
 ## Antevo Mandates
 
 `https://api.antevo.ch/mcp/mandates/mcp`
 
-- **Cursor** — [add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=antevo-mandates&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcGkuYW50ZXZvLmNoL21jcC9tYW5kYXRlcy9tY3AifQ==)
-- **VS Code** — [add to VS Code](vscode:mcp/install?%7B%22name%22%3A%20%22antevo-mandates%22%2C%20%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A//api.antevo.ch/mcp/mandates/mcp%22%7D)
+For firms, by arrangement.
+
+- **Claude**: Customize → Connectors → Add → Add custom connector, and paste the address
+- **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=antevo-mandates&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.antevo.ch%2Fmcp%2Fmandates%2Fmcp%22%7D)
+- **Cursor**: one click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), or the [`mcp.json`](#cursor) below
+- **Claude Code**: `claude mcp add --transport http antevo-mandates https://api.antevo.ch/mcp/mandates/mcp`
+
+## Cursor
+
+Add the ones you want to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.json` (one project):
+
+```json
+{
+  "mcpServers": {
+    "the-0700-brief": {
+      "url": "https://api.antevo.ch/mcp/0700/mcp"
+    },
+    "antevo-executive": {
+      "url": "https://api.antevo.ch/mcp/executive/mcp"
+    },
+    "antevo-trademark": {
+      "url": "https://trademark.antevo.ch/mcp"
+    },
+    "antevo-wealth": {
+      "url": "https://api.antevo.ch/mcp/wealth/mcp"
+    },
+    "antevo-mandates": {
+      "url": "https://api.antevo.ch/mcp/mandates/mcp"
+    }
+  }
+}
+```
+
+## Gemini CLI
+
+All five at once, as an extension:
+
+```sh
+gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp
+```
 
 ## Everything else
 
-Any MCP client takes the URL directly. Claude Desktop, Claude Code, Windsurf, Zed and Goose
-all accept a remote Streamable HTTP server; paste the URL and you are connected.
+Any MCP client takes the URL directly. Windsurf, Zed, Goose and the rest accept a remote Streamable HTTP server: paste the address and you are connected.
