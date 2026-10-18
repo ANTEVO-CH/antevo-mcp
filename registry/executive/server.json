@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "ch.antevo/executive",
   "title": "Antevo Executive Brief",
-  "description": "Market and world intelligence \u2014 the daily editorial read, risk radar and dated archive.",
-  "version": "1.0.1",
+  "description": "Market and world intelligence — the daily editorial read, risk radar and dated archive.",
+  "version": "1.0.2",
   "websiteUrl": "https://antevo.ch/mcp",
   "repository": {
     "url": "https://github.com/ANTEVO-CH/antevo-mcp",
@@ -22,10 +22,6 @@
     {
       "type": "streamable-http",
       "url": "https://api.antevo.ch/mcp/executive/mcp"
-    },
-    {
-      "type": "sse",
-      "url": "https://api.antevo.ch/mcp/executive/sse"
     }
   ]
 }

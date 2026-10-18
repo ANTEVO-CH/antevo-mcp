@@ -3,7 +3,7 @@
   "name": "ch.antevo/0700-brief",
   "title": "The 07:00 Brief",
   "description": "Your agent knows the markets by 07:00, every day. We read them so you don't have to.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://antevo.ch/mcp",
   "repository": {
     "url": "https://github.com/ANTEVO-CH/antevo-mcp",
@@ -22,10 +22,6 @@
     {
       "type": "streamable-http",
       "url": "https://api.antevo.ch/mcp/0700/mcp"
-    },
-    {
-      "type": "sse",
-      "url": "https://api.antevo.ch/mcp/0700/sse"
     }
   ]
 }

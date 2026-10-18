@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "ch.antevo/wealth",
   "title": "Antevo Wealth",
-  "description": "The family estate in full \u2014 what you hold, what you owe, and what it is exposed to.",
-  "version": "1.0.1",
+  "description": "The family estate in full — what you hold, what you owe, and what it is exposed to.",
+  "version": "1.0.2",
   "websiteUrl": "https://antevo.ch/mcp",
   "repository": {
     "url": "https://github.com/ANTEVO-CH/antevo-mcp",
@@ -22,10 +22,6 @@
     {
       "type": "streamable-http",
       "url": "https://api.antevo.ch/mcp/wealth/mcp"
-    },
-    {
-      "type": "sse",
-      "url": "https://api.antevo.ch/mcp/wealth/sse"
     }
   ]
 }
