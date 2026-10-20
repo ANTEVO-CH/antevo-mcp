@@ -2,7 +2,7 @@
   "name": "antevo-trademark",
   "displayName": "Antevo Trademark",
   "version": "1.0.0",
-  "description": "Screen a brand name across twenty trademark registers and get the opposition window for each office, with the provision it comes from. Public — no account, no key. Read-only.",
+  "description": "Screen a name or a shortlist across twenty trademark registers, with the companies and domains already registered under each name, and get the opposition window for each office, with the provision it comes from. Public — no account, no key. Read-only.",
   "author": {
     "name": "Antevo",
     "email": "contact@antevo.ch",
