@@ -127,6 +127,14 @@ The information a server returns to your question. Your chosen AI service handle
 
 No. It is editorial market intelligence, public-register data and a reading of your own record. Technical signals say how indicators lean, never buy or sell.
 
+### Who runs Antevo?
+
+Antevo ([antevo.ch](https://antevo.ch)) is operated by VestAI LTD, registered in Limassol, Cyprus, with an operating office in Zürich. It serves clients in Switzerland.
+
+### Is there a website as well as the servers?
+
+Yes. The free trademark clearance check also runs on the web, with no account, at [antevo.ch/trademark](https://antevo.ch/trademark/). The 07:00 Brief is described at [0700.io](https://0700.io) and the Executive Brief at [antevo.ch/executive](https://antevo.ch/executive/).
+
 ## Privacy and support
 
 - Privacy policy: <https://antevo.ch/policies/privacy-policy>
@@ -143,6 +151,6 @@ The contents of this repository are MIT licensed — see [LICENSE](LICENSE) and 
 ---
 
 <p align="center">
-  <b>Antevo</b> · Switzerland · <a href="https://antevo.ch">antevo.ch</a> · <a href="https://antevo.ch/mcp">Connect</a> · <a href="mailto:contact@antevo.ch">contact@antevo.ch</a><br>
+  <b>Antevo</b> · serves Switzerland · operated by VestAI LTD, Cyprus · <a href="https://antevo.ch">antevo.ch</a> · <a href="https://antevo.ch/mcp">Connect</a> · <a href="mailto:contact@antevo.ch">contact@antevo.ch</a><br>
   <sub>Intelligence, not advice.</sub>
 </p>
