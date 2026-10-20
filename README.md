@@ -38,7 +38,7 @@
 |:--|:--|:--|:--|--:|
 | **0.** | **The 07:00 Brief** — your agent knows the markets by 07:00, every day: the daily brief, Market Map, Big Picture, Three Minute Brief, Risk Radar and sector notes | `https://api.antevo.ch/mcp/0700/mcp` | Public | 4 |
 | **I.** | **Executive** — the daily editorial read, risk radar, forward calendar, dated archive, desk reads, world-events map, macro-economic history | `https://api.antevo.ch/mcp/executive/mcp` | Public | 15 |
-| **II.** | **Trademark** — screen a name, read a holder's filing pattern, check an opposition window | `https://trademark.antevo.ch/mcp` | Public screening | 4 |
+| **II.** | **Trademark** — screen a name or a whole shortlist, with the companies and domains already registered under each name; read a holder's filing pattern; check an opposition window | `https://trademark.antevo.ch/mcp` | Public screening | 5 |
 | **III.** | **Wealth** — your household: holdings, allocation, risk, real assets, liabilities, goals, documents | `https://api.antevo.ch/mcp/wealth/mcp` | Your account | 36 |
 | **IV.** | **Mandates** — your firm's client book: clients, reviews, meeting briefs, goals, documents, succession | `https://api.antevo.ch/mcp/mandates/mcp` | By arrangement | 24 |
 
