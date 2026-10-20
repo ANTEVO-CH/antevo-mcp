@@ -1,8 +1,8 @@
 # Antevo Trademark
 
-Screen a brand name, or a whole shortlist, across twenty trademark registers, see
-the companies and domains already registered under each name, and get the opposition
-window for each office with the provision it comes from.
+Screen a brand name, or a whole shortlist, across 50+ trademark registers, see the
+companies and domains already registered under each name, and get the opposition
+window in twenty offices with the provision it comes from.
 
 **Public. No account, no key.**
 
