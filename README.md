@@ -129,7 +129,7 @@ No. It is editorial market intelligence, public-register data and a reading of y
 
 ### Who runs Antevo?
 
-Antevo ([antevo.ch](https://antevo.ch)) is operated by VestAI LTD, registered in Limassol, Cyprus, with an operating office in Zürich. It serves clients in Switzerland.
+Antevo ([antevo.ch](https://antevo.ch)) is operated by VestAI LTD, registered in Limassol, Cyprus, with an operating office in Zürich. It serves clients in Switzerland, and Antevo Wealth is Swiss-hosted: records and documents are held in Switzerland.
 
 ### Is there a website as well as the servers?
 
@@ -151,6 +151,6 @@ The contents of this repository are MIT licensed — see [LICENSE](LICENSE) and 
 ---
 
 <p align="center">
-  <b>Antevo</b> · serves Switzerland · operated by VestAI LTD, Cyprus · <a href="https://antevo.ch">antevo.ch</a> · <a href="https://antevo.ch/mcp">Connect</a> · <a href="mailto:contact@antevo.ch">contact@antevo.ch</a><br>
+  <b>Antevo</b> · serves Switzerland, Swiss-hosted · operated by VestAI LTD, Cyprus · <a href="https://antevo.ch">antevo.ch</a> · <a href="https://antevo.ch/mcp">Connect</a> · <a href="mailto:contact@antevo.ch">contact@antevo.ch</a><br>
   <sub>Intelligence, not advice.</sub>
 </p>
