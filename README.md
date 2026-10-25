@@ -39,10 +39,10 @@
 | **0.** | **The 07:00 Brief** — your agent knows the markets by 07:00, every day: the daily brief, Market Map, Big Picture, Three Minute Brief, Risk Radar and sector notes | `https://api.antevo.ch/mcp/0700/mcp` | Public | 4 |
 | **I.** | **Executive** — the daily editorial read, risk radar, forward calendar, dated archive, desk reads, world-events map, macro-economic history | `https://api.antevo.ch/mcp/executive/mcp` | Public | 15 |
 | **II.** | **Trademark** — screen a name or a whole shortlist, with the companies and domains already registered under each name; read a holder's filing pattern; check an opposition window | `https://trademark.antevo.ch/mcp` | Public screening | 5 |
-| **III.** | **Wealth** — your household: holdings, allocation, risk, real assets, liabilities, goals, documents | `https://api.antevo.ch/mcp/wealth/mcp` | Your account | 36 |
+| **III.** | **Wealth** — your household: holdings, allocation, risk, real assets, liabilities, goals, documents | `https://api.antevo.ch/mcp/wealth/mcp` | Your account | 38 |
 | **IV.** | **Mandates** — your firm's client book: clients, reviews, meeting briefs, goals, documents, succession | `https://api.antevo.ch/mcp/mandates/mcp` | By arrangement | 24 |
 
-Tool counts are read live from each server's `tools/list`. Every Wealth tool is read-only; Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
+Tool counts are read live from each server's `tools/list`. Wealth reads your whole book, and can record holdings you already own — only after you confirm. It never trades, moves money or deletes anything. Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
 
 ## The 07:00 Brief: make it automatic
 
