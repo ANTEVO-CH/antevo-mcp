@@ -12,9 +12,9 @@ Do not open a public issue for a suspected vulnerability.
 **Executive** and **Trademark** are public and **read-only**. They serve published editorial
 data, public-register data and market prices, carry no personal data and need no account.
 
-**Wealth** is **read-only**. No tool on the aggregated Wealth connector can create, modify or
-delete anything. It serves one signed-in customer their own household's records, over OAuth
-2.1 with PKCE.
+**Wealth** serves one signed-in customer their own household's records, over OAuth 2.1 with
+PKCE. It reads their whole book, and can record holdings they already own — only after they
+confirm. It never trades, moves money or deletes anything.
 
 **Mandates** serves one signed-in firm its own client book over the same OAuth 2.1 flow, and it
 is **not** read-only: it can create and update client records, goals and documents. Irreversible

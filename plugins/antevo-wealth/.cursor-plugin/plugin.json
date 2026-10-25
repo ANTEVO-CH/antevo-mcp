@@ -2,7 +2,7 @@
   "name": "antevo-wealth",
   "displayName": "Antevo Wealth",
   "version": "1.0.0",
-  "description": "Your own household — positions, allocation, AUM, drift, real assets and compliance breaches. Signs you in over OAuth 2.1 and reads your book and nothing else. Read-only: no tool here can place a trade or move money.",
+  "description": "Your own household — positions, allocation, AUM, drift, real assets and compliance breaches. Signs you in over OAuth 2.1, reads your whole book, and can record holdings you already own — only after you confirm. It never trades, moves money or deletes anything.",
   "author": {
     "name": "Antevo",
     "email": "contact@antevo.ch",

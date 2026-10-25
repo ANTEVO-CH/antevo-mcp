@@ -4,7 +4,7 @@ Your own household — positions, allocation, AUM, drift, real assets and
 compliance breaches.
 
 **Signs you in over OAuth 2.1.** Your assistant receives a scoped token, never
-your password, and reads your book and nothing else.
+your password, and reaches your own book and nothing else.
 
 `https://api.antevo.ch/mcp/wealth/mcp`
 
@@ -17,7 +17,8 @@ your password, and reads your book and nothing else.
 
 ## What it will not do
 
-Every tool is read-only. **No tool here can place a trade or move money.** Every
-answer carries its source and its date.
+It reads your whole book, and can record holdings you already own — only after
+you confirm. **It never trades, moves money or deletes anything.** Every answer
+carries its source and its date.
 
 You need an Antevo Wealth account: <https://antevo.ch/wealth>
