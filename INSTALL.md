@@ -30,7 +30,7 @@ Public, no account.
 
 `https://trademark.antevo.ch/mcp`
 
-Screening needs no account; the watchlist and investigations ask you to sign in.
+Screening (five tools) needs no account; the other eleven, such as the watchlist, filer follows and investigations, ask you to sign in.
 
 - **Claude**: Customize → Connectors → Add → Add custom connector, and paste the address
 - **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=antevo-trademark&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Ftrademark.antevo.ch%2Fmcp%22%7D)

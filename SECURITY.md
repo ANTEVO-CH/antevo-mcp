@@ -9,8 +9,9 @@ Do not open a public issue for a suspected vulnerability.
 
 ## What these servers do
 
-**Executive** is public and **read-only**. It serves published editorial data and market prices,
-carries no personal data and needs no account.
+**The 07:00 Brief** and **Executive** are public and **read-only**. The 07:00 Brief serves
+published editorial text; Executive serves published editorial data and market prices. Neither
+carries personal data or needs an account.
 
 **Trademark** screening is public and **read-only**: its five public tools read public-register
 data and need no account, and without an account they do not name private individuals who
@@ -23,8 +24,9 @@ PKCE. It reads their whole book, and can record holdings they already own — on
 confirm. It never trades, moves money or deletes anything.
 
 **Mandates** serves one signed-in firm its own client book over the same OAuth 2.1 flow, and it
-is **not** read-only: it can create and update client records, goals and documents. Irreversible
-actions — converting a prospect, deleting a document — return a plan first and run only when
+is **not** read-only: it can create and update client records, goals and documents, and create a
+share link to a document that anyone holding it can download, for up to 30 days. Converting a
+prospect, deleting a document and creating a share link return a plan first and run only when
 called again with confirmation.
 
 No tool on any of them can place a trade or move money.

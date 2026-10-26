@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "antevo-executive",
   "version": "1.0.0",
-  "description": "Antevo's daily markets, macro and world-events briefing: the market regime, themes and risks, catalysts, a risk radar, macro history and per-country world-events drilldowns. Every answer names the dated edition behind it. Public, no account. Intelligence, not investment advice.",
+  "description": "Antevo's daily markets, macro and world-events briefing: the market regime, themes and risks, catalysts, a risk radar, macro history and the world-events map by layer. Every answer names the dated edition behind it. Public, no account. Intelligence, not investment advice.",
   "author": {
     "name": "Antevo",
     "email": "contact@antevo.ch",
