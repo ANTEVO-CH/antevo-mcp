@@ -13,7 +13,7 @@
 ### Why Antevo
 
 - **A named desk, not a web search.** Answers come from Antevo's published Executive Brief, the trademark registers themselves, and — when you sign in — your own record, with the date on every read.
-- **Public where it can be, permissioned where it matters.** Executive and trademark screening reach no personal data. Wealth and Mandates sign in over OAuth 2.1 with PKCE.
+- **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive and trademark screening reach no personal data. Wealth, Mandates and Trademark's signed-in tools use OAuth 2.1 with PKCE.
 - **Intelligence, not advice.** Nothing here places a trade or moves money.
 
 ![How a question travels: your assistant speaks MCP to four Antevo connections, which draw on the Antevo desk and return an answer with the record behind it](assets/connections.svg)
@@ -85,6 +85,7 @@ Which clients are due a review this month?                               → Man
 ## Authentication
 
 - **The 07:00 Brief, Executive and Trademark screening** need no token. They are rate-limited per client and hold no personal data.
+- **Trademark's other eleven tools** — the watchlist and its conflicts, deadlines, filing activity in a class, a holder's whole book, filer follows, investigations and the credit balance — sign in over OAuth 2.1 with PKCE and Dynamic Client Registration on the same address; calling one starts it.
 - **Wealth and Mandates** use OAuth 2.1 with PKCE and Dynamic Client Registration. Discovery is open — `initialize`, `tools/list` and `ping` answer without a token, so a client can inspect the surface before anyone signs in. Any `tools/call` without a token answers `401` with an RFC 9728 `WWW-Authenticate` challenge, and a compliant client completes sign-in on its own.
 - Your assistant receives a scoped, short-lived token — never your password — and your account's own permissions apply.
 

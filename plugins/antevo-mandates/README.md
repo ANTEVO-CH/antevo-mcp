@@ -18,9 +18,10 @@ your password, and reaches your own firm and nothing else.
 ## What it can change
 
 Mandates is **not read-only**. Within your own firm it can create and update
-client records, record a completed review, set goals, manage documents and link
-an email to a client. Converting a prospect or deleting a document returns a plan
-first and only runs when you confirm. **No tool here can place a trade or move
+client records, record a completed review, assign team members, set goals, manage
+documents, create a time-limited share link to a document and link an email to a
+client. Converting a prospect, deleting a document or creating a share link returns
+a plan first and only runs when you confirm. **No tool here can place a trade or move
 money.**
 
 You need an Antevo Mandates firm account: <https://antevo.ch/mandate>
