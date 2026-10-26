@@ -28,7 +28,9 @@ Powers → Add Custom Power → import from GitHub:
 
 ## What it will not do
 
-Every tool is read-only. EU marks come from EUIPO's search at the time you ask; the
+Without an account, the five screening tools answer, and they only read. The address
+also lists the tools for your own watchlist; they need sign-in, and calling one starts it.
+EU marks come from EUIPO's search at the time you ask; the
 other trademark registers are read from Antevo's copy, refreshed from each office, so
 a filing from the last few days can be missing. Company names come from the Swiss
 commercial register (Zefix), and from Companies House and ACRA when you ask about the
