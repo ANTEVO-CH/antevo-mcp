@@ -9,8 +9,14 @@ Do not open a public issue for a suspected vulnerability.
 
 ## What these servers do
 
-**Executive** and **Trademark** are public and **read-only**. They serve published editorial
-data, public-register data and market prices, carry no personal data and need no account.
+**Executive** is public and **read-only**. It serves published editorial data and market prices,
+carries no personal data and needs no account.
+
+**Trademark** screening is public and **read-only**: its five public tools read public-register
+data and need no account, and without an account they do not name private individuals who
+filed marks. The same address lists eleven more tools that need OAuth sign-in. Four of them
+change the signed-in user's own records: add a name to their watchlist, follow a filer, dismiss
+a conflict (which they can undo), and run an investigation into a holder, which uses a credit.
 
 **Wealth** serves one signed-in customer their own household's records, over OAuth 2.1 with
 PKCE. It reads their whole book, and can record holdings they already own — only after they
@@ -21,7 +27,7 @@ is **not** read-only: it can create and update client records, goals and documen
 actions — converting a prospect, deleting a document — return a plan first and run only when
 called again with confirmation.
 
-No tool on any of the four can place a trade or move money.
+No tool on any of them can place a trade or move money.
 
 For Wealth and Mandates, discovery is deliberately open — `initialize`, `tools/list` and
 `ping` answer without a token, so the tool surface can be inspected before anyone signs in.

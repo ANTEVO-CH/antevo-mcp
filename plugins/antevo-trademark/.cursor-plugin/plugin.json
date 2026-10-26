@@ -1,8 +1,8 @@
 {
   "name": "antevo-trademark",
   "displayName": "Antevo Trademark",
-  "version": "1.0.0",
-  "description": "Screen a name or a shortlist across 50+ trademark registers, with the companies and domains already registered under each name, and get the opposition window in twenty offices, with the provision it comes from. Public — no account, no key. Read-only.",
+  "version": "1.0.1",
+  "description": "Screen a name or a shortlist across 50+ trademark registers, with the companies and domains already registered under each name, and get the opposition window in twenty offices, with the provision it comes from. Screening needs no account and no key, and only reads.",
   "author": {
     "name": "Antevo",
     "email": "contact@antevo.ch",
