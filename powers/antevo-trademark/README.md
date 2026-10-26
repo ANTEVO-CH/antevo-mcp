@@ -31,8 +31,10 @@ Powers → Add Custom Power → import from GitHub:
 Without an account, the five screening tools answer, and they only read. The address
 also lists the tools for your own watchlist; they need sign-in, and calling one starts it.
 EU marks come from EUIPO's search at the time you ask; the
-other trademark registers are read from Antevo's copy, refreshed from each office, so
-a filing from the last few days can be missing. Company names come from the Swiss
+other trademark registers are read from Antevo's copy. How far back it goes differs by
+office: for many, including the US, the UK, Germany, France and Japan, it holds filings
+from 2025 or 2026, so an older mark can be missing, and so can a filing from the last
+few days. Company names come from the Swiss
 commercial register (Zefix), and from Companies House and ACRA when you ask about the
 UK or Singapore; domains from each registry's own lookup service. A source that does
 not answer is reported as not checked, never as nothing found.
