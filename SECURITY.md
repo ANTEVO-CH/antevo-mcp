@@ -13,6 +13,10 @@ Do not open a public issue for a suspected vulnerability.
 published editorial text; Executive serves published editorial data and market prices. Neither
 carries personal data or needs an account.
 
+**Tremor Watch** is public and **read-only**. It serves the weekly Antevo Tremor Index as derived
+statistics (shares, correlations, z-scores and percentiles), never price or index levels, and
+carries no personal data or account.
+
 **Trademark** screening is public and **read-only**: its five public tools read public-register
 data and need no account, and without an account they do not name private individuals who
 filed marks. The same address lists eleven more tools that need OAuth sign-in. Four of them

@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "antevo-tremor-watch": {
+      "url": "https://api.antevo.ch/mcp/tremor/mcp"
+    }
+  }
+}

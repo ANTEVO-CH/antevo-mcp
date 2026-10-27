@@ -1,8 +1,8 @@
 ![Antevo: a question field cycling through questions your assistant can now answer, beside a lens where signals from the world travel inward to you](assets/cover.svg)
 
-# Antevo MCP: five remote MCP servers for markets, trademarks, wealth and mandates
+# Antevo MCP: six remote MCP servers for markets, market stress, trademarks, wealth and mandates
 
-**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the trademark registers, your own household and your firm's client book — five remote servers over Streamable HTTP. Three need no account. There is nothing to download and nothing to run.
+**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the weekly Tremor index, the trademark registers, your own household and your firm's client book — six remote servers over Streamable HTTP. Four need no account. There is nothing to download and nothing to run.
 
 [![validate](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-ch.antevo-252c28?labelColor=9b7936)](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo)
@@ -13,7 +13,7 @@
 ### Why Antevo
 
 - **A named desk, not a web search.** Answers come from Antevo's published Executive Brief, the trademark registers themselves, and — when you sign in — your own record, with the date on every read.
-- **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive and trademark screening reach no personal data. Wealth, Mandates and Trademark's signed-in tools use OAuth 2.1 with PKCE.
+- **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive, Tremor Watch and trademark screening reach no personal data. Wealth, Mandates and Trademark's signed-in tools use OAuth 2.1 with PKCE.
 - **Intelligence, not advice.** Nothing here places a trade or moves money.
 
 ![How a question travels: your assistant speaks MCP to four Antevo connections, which draw on the Antevo desk and return an answer with the record behind it](assets/connections.svg)
@@ -41,6 +41,7 @@
 | **II.** | **Trademark** — screen a name or a whole shortlist, with the companies and domains already registered under each name; read a holder's filing pattern; check an opposition window | `https://trademark.antevo.ch/mcp` | Public screening (5 tools); sign-in for the rest | 16 |
 | **III.** | **Wealth** — your household: holdings, allocation, risk, real assets, liabilities, goals, documents | `https://api.antevo.ch/mcp/wealth/mcp` | Your account | 38 |
 | **IV.** | **Mandates** — your firm's client book: clients, reviews, meeting briefs, goals, documents, succession | `https://api.antevo.ch/mcp/mandates/mcp` | By arrangement | 24 |
+| **V.** | **Tremor Watch** — how many of 753 market relationships stopped behaving this week: the Antevo Tremor Index against a normal Friday, its seven families, the new breaks, any week's pairs and every reading since 1997 | `https://api.antevo.ch/mcp/tremor/mcp` | Public | 4 |
 
 Tool counts are read live from each server's `tools/list`. Wealth reads your whole book, and can record holdings you already own — only after you confirm. It never trades, moves money or deletes anything. Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
 
@@ -64,10 +65,10 @@ The brief is out around 07:00 Zurich time; in Asia, pick a time after 14:00 Sing
 |:--|:--|
 | **Claude** — Code, Desktop, claude.ai | `/plugin marketplace add ANTEVO-CH/plugins`, then `/plugin install antevo-executive@antevo` — each connection with its skills. See [ANTEVO-CH/plugins](https://github.com/ANTEVO-CH/plugins). |
 | **Claude** — directory | One click: [The 07:00 Brief](https://claude.ai/directory/the-0700-brief), [Executive](https://claude.ai/directory/antevo-executive-brief), [Wealth](https://claude.ai/directory/antevo-wealth). |
-| **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — five plugins, take only what you need. |
+| **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — six plugins, take only what you need. |
 | **VS Code** | One click from [INSTALL.md](INSTALL.md). |
 | **Gemini CLI** | `gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp` |
-| **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has The 07:00 Brief, Executive and Trademark. |
+| **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has The 07:00 Brief, Executive, Tremor Watch and Trademark. |
 | **Windsurf, Zed, Goose, any MCP client** | Paste an address from [the servers](#the-servers) as a remote Streamable HTTP server. |
 | **A terminal** | `npx @antevo/cli brief` — see [ANTEVO-CH/cli](https://github.com/ANTEVO-CH/cli). |
 
@@ -77,6 +78,7 @@ The brief is out around 07:00 Zurich time; in Asia, pick a time after 14:00 Sing
 What do I need to know about markets today?                              → The 07:00 Brief
 What happened in markets today, and what does the desk make of it?     → Executive
 What could go wrong from here — and what would settle it?               → Executive
+Are markets under strain this week — which relationships are breaking?  → Tremor Watch
 Has anyone filed anything close to "Novara"?                             → Trademark
 Where am I concentrated?                                                 → Wealth, after sign-in
 Which clients are due a review this month?                               → Mandates, after sign-in
@@ -84,7 +86,7 @@ Which clients are due a review this month?                               → Man
 
 ## Authentication
 
-- **The 07:00 Brief, Executive and Trademark screening** need no token. They are rate-limited per client and hold no personal data.
+- **The 07:00 Brief, Executive, Tremor Watch and Trademark screening** need no token. They are rate-limited per client and hold no personal data.
 - **Trademark's other eleven tools** — the watchlist and its conflicts, deadlines, filing activity in a class, a holder's whole book, filer follows, investigations and the credit balance — sign in over OAuth 2.1 with PKCE and Dynamic Client Registration on the same address; calling one starts it.
 - **Wealth and Mandates** use OAuth 2.1 with PKCE and Dynamic Client Registration. Discovery is open — `initialize`, `tools/list` and `ping` answer without a token, so a client can inspect the surface before anyone signs in. Any `tools/call` without a token answers `401` with an RFC 9728 `WWW-Authenticate` challenge, and a compliant client completes sign-in on its own.
 - Your assistant receives a scoped, short-lived token — never your password — and your account's own permissions apply.
@@ -95,10 +97,10 @@ Connection metadata, and nothing else. There is no application code, no data and
 
 | Path | What it is |
 |:--|:--|
-| [`registry/*/server.json`](registry) | Mirrors of the five published [MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo) entries |
-| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The five plugins, for the Cursor marketplace |
+| [`registry/*/server.json`](registry) | Mirrors of the published [MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo) entries |
+| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The six plugins, for the Cursor marketplace |
 | [`plugins/*/`](plugins) | Each plugin's `.cursor-plugin/plugin.json`, `mcp.json`, README and logo |
-| [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for the three public servers |
+| [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for the four public servers |
 | [`gemini-extension.json`](gemini-extension.json) | Makes this repository a Gemini CLI extension |
 | [`INSTALL.md`](INSTALL.md) | One-click install links for Cursor and VS Code |
 
@@ -106,15 +108,15 @@ CI runs on every push: every JSON file parses, Cursor's own [plugin-template val
 
 ## Registry
 
-All five servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
+All six servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
 
-`ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates`
+`ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates` · `ch.antevo/tremor-watch`
 
 ## FAQ
 
 ### Do I need an account?
 
-Not for The 07:00 Brief, Executive or trademark screening. Wealth needs an [Antevo Wealth](https://antevo.ch/wealth) account; Mandates needs a firm account, [by arrangement](https://antevo.ch/mandate).
+Not for The 07:00 Brief, Executive, Tremor Watch or trademark screening. Wealth needs an [Antevo Wealth](https://antevo.ch/wealth) account; Mandates needs a firm account, [by arrangement](https://antevo.ch/mandate).
 
 ### Why is Trademark on a different host?
 
@@ -134,7 +136,7 @@ Antevo ([antevo.ch](https://antevo.ch)) is operated by VestAI LTD, registered in
 
 ### Is there a website as well as the servers?
 
-Yes. The free trademark name check also runs on the web, with no account, at [antevo.ch/trademark](https://antevo.ch/trademark/). The 07:00 Brief is described at [0700.io](https://0700.io) and the Executive Brief at [antevo.ch/executive](https://antevo.ch/executive/).
+Yes. The free trademark name check also runs on the web, with no account, at [antevo.ch/trademark](https://antevo.ch/trademark/). The 07:00 Brief is described at [0700.io](https://0700.io), the Executive Brief at [antevo.ch/executive](https://antevo.ch/executive/) and the Tremor index at [antevo.ch/tremor-watch](https://antevo.ch/tremor-watch/), with its data open as JSON.
 
 ## Privacy and support
 

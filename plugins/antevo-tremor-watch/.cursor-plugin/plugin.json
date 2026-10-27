@@ -1,0 +1,23 @@
+{
+  "name": "antevo-tremor-watch",
+  "displayName": "Tremor Watch",
+  "version": "1.0.0",
+  "description": "How many market relationships stopped behaving this week. The Antevo Tremor Index follows 753 pairs of markets in seven families; a pair breaks when its correlation is two standard deviations from its own previous two years. This week against a normal Friday, the families, the new breaks, any week's pairs and every reading since 1997. Public — no account, no key. Read-only; descriptive, not a forecast, not investment advice.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/tremor-watch/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "markets",
+    "correlation",
+    "market-stress",
+    "cross-asset",
+    "risk"
+  ],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/tremor-watch/",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

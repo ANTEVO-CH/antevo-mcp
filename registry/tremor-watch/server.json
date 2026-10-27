@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ch.antevo/tremor-watch",
+  "title": "Tremor Watch",
+  "description": "How many market relationships stopped behaving this week: the Antevo Tremor Index, since 1997.",
+  "version": "1.0.0",
+  "websiteUrl": "https://antevo.ch/tremor-watch/",
+  "repository": {
+    "url": "https://github.com/ANTEVO-CH/antevo-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://antevo.ch/assets/antevo-symbol-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.antevo.ch/mcp/tremor/mcp"
+    }
+  ]
+}
