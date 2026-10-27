@@ -108,9 +108,9 @@ CI runs on every push: every JSON file parses, Cursor's own [plugin-template val
 
 ## Registry
 
-All five servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
+All six servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
 
-`ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates`
+`ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates` · `ch.antevo/tremor-watch`
 
 ## FAQ
 
