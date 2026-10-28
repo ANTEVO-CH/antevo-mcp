@@ -32,7 +32,7 @@ Public, no account.
 
 Public, no account.
 
-- **Claude**: Customize → Connectors → Add → Add custom connector, and paste the address
+- **Claude**: [open in Claude's directory](https://claude.ai/directory/antevo-tremor-watch), then Connect
 - **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=antevo-tremor-watch&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.antevo.ch%2Fmcp%2Ftremor%2Fmcp%22%7D)
 - **Cursor**: the [`mcp.json`](#cursor) below
 - **Claude Code**: `claude mcp add --transport http antevo-tremor-watch https://api.antevo.ch/mcp/tremor/mcp`
