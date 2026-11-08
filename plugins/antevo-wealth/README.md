@@ -1,7 +1,8 @@
 # Antevo Wealth
 
 Your own household — positions, allocation, AUM, drift, real assets and
-compliance breaches, and on Wealth+ your succession readiness.
+compliance breaches, a one-page map of where your wealth sits, and on Wealth+
+your succession readiness.
 
 **Signs you in over OAuth 2.1.** Your assistant receives a scoped token, never
 your password, and reaches your own book and nothing else.
@@ -14,6 +15,8 @@ your password, and reaches your own book and nothing else.
 - Where am I concentrated?
 - What real assets do I hold?
 - Do I have open compliance breaches?
+- Where does my wealth actually sit? (a one-page map from what you tell it: by
+  country, by kind, and what each institution sees; nothing is stored)
 - If something happened to me tomorrow, what is missing? (Wealth+: your
   succession gaps and Legacy checklist, people by role, never by name)
 
