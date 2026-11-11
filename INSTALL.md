@@ -1,6 +1,6 @@
 # Install links
 
-Same six servers everywhere; only the wrapper changes. Every one is a remote Streamable HTTP server, so there is nothing to run locally.
+Same seven servers everywhere; only the wrapper changes. Every one is a remote Streamable HTTP server, so there is nothing to run locally.
 
 GitHub doesn't open app links (`cursor://`, `vscode:`), so the VS Code links below go through Microsoft's https redirect, and Cursor's one-click buttons are on [antevo.ch/mcp](https://antevo.ch/mcp/#connections). In Cursor you can also paste the [`mcp.json`](#cursor) below.
 
@@ -70,6 +70,17 @@ For firms, by arrangement.
 - **Cursor**: one click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), or the [`mcp.json`](#cursor) below
 - **Claude Code**: `claude mcp add --transport http antevo-mandates https://api.antevo.ch/mcp/mandates/mcp`
 
+## Antevo Companies
+
+`https://api.antevo.ch/mcp/companies/mcp`
+
+Any Antevo account, after sign-in: the public record on a Swiss company. Finding a company is free; opening a file uses your credits. Step by step: [antevo.ch/mcp/companies](https://antevo.ch/mcp/companies/).
+
+- **Claude**: Customize → Connectors → Add → Add custom connector, and paste the address
+- **VS Code**: [add to VS Code](https://vscode.dev/redirect/mcp/install?name=antevo-companies&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.antevo.ch%2Fmcp%2Fcompanies%2Fmcp%22%7D)
+- **Cursor**: one click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), or the [`mcp.json`](#cursor) below
+- **Claude Code**: `claude mcp add --transport http antevo-companies https://api.antevo.ch/mcp/companies/mcp`
+
 ## Cursor
 
 Add the ones you want to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.json` (one project):
@@ -94,6 +105,9 @@ Add the ones you want to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.jso
     },
     "antevo-mandates": {
       "url": "https://api.antevo.ch/mcp/mandates/mcp"
+    },
+    "antevo-companies": {
+      "url": "https://api.antevo.ch/mcp/companies/mcp"
     }
   }
 }
@@ -101,7 +115,7 @@ Add the ones you want to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.jso
 
 ## Gemini CLI
 
-All six at once, as an extension:
+The six registry servers at once, as an extension (add Companies by its address):
 
 ```sh
 gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp

@@ -1,8 +1,8 @@
 ![Antevo: a question field cycling through questions your assistant can now answer, beside a lens where signals from the world travel inward to you](assets/cover.svg)
 
-# Antevo MCP: six remote MCP servers for markets, market stress, trademarks, wealth and mandates
+# Antevo MCP: seven remote MCP servers for markets, market stress, trademarks, companies, wealth and mandates
 
-**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the weekly Tremor index, the trademark registers, your own household and your firm's client book — six remote servers over Streamable HTTP. Four need no account. There is nothing to download and nothing to run.
+**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the weekly Tremor index, the trademark registers, the public record on a Swiss company, your own household and your firm's client book — seven remote servers over Streamable HTTP. Four need no account. There is nothing to download and nothing to run.
 
 [![validate](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-ch.antevo-252c28?labelColor=9b7936)](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo)
@@ -13,7 +13,7 @@
 ### Why Antevo
 
 - **A named desk, not a web search.** Answers come from Antevo's published Executive Brief, the trademark registers themselves, and — when you sign in — your own record, with the date on every read.
-- **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive, Tremor Watch and trademark screening reach no personal data. Wealth, Mandates and Trademark's signed-in tools use OAuth 2.1 with PKCE.
+- **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive, Tremor Watch and trademark screening reach no personal data. Wealth, Mandates, Companies and Trademark's signed-in tools use OAuth 2.1 with PKCE.
 - **Intelligence, not advice.** Nothing here places a trade or moves money.
 
 ![How a question travels: your assistant speaks MCP to four Antevo connections, which draw on the Antevo desk and return an answer with the record behind it](assets/connections.svg)
@@ -42,8 +42,9 @@
 | **III.** | **Wealth** — your household: holdings, allocation, risk, real assets, liabilities, goals, documents, a one-page map of where your wealth sits and, on Wealth+, succession readiness | `https://api.antevo.ch/mcp/wealth/mcp` | Your account | 41 |
 | **IV.** | **Mandates** — your firm's client book: clients, reviews, meeting briefs, goals, documents, succession | `https://api.antevo.ch/mcp/mandates/mcp` | By arrangement | 24 |
 | **V.** | **Tremor Watch** — how many of 753 market relationships stopped behaving this week: the Antevo Tremor Index against a normal Friday, its seven families, the new breaks, any week's pairs and every reading since 1997 | `https://api.antevo.ch/mcp/tremor/mcp` | Public | 4 |
+| **VI.** | **Companies** — the public record on a Swiss company: the commercial register, the gazette's dated changes, the group structure and sanctions-list checks, every line with its source and date, and a watch for changes. Supports a KYC file; not a KYC check | `https://api.antevo.ch/mcp/companies/mcp` | Any Antevo account | 4 |
 
-Tool counts are read live from each server's `tools/list`. Wealth reads your whole book, and can record holdings you already own — only after you confirm. It never trades, moves money or deletes anything. Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
+Tool counts are read live from each server's `tools/list` (Companies lists its tools after sign-in). Wealth reads your whole book, and can record holdings you already own — only after you confirm. It never trades, moves money or deletes anything. Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
 
 ## The 07:00 Brief: make it automatic
 
@@ -83,6 +84,7 @@ Are markets under strain this week — which relationships are breaking?  → Tr
 Has anyone filed anything close to "Novara"?                             → Trademark
 Where am I concentrated?                                                 → Wealth, after sign-in
 Which clients are due a review this month?                               → Mandates, after sign-in
+What has changed at this Swiss company since January?                    → Companies, after sign-in
 ```
 
 ## Authentication
@@ -90,6 +92,7 @@ Which clients are due a review this month?                               → Man
 - **The 07:00 Brief, Executive, Tremor Watch and Trademark screening** need no token. They are rate-limited per client and hold no personal data.
 - **Trademark's other eleven tools** — the watchlist and its conflicts, deadlines, filing activity in a class, a holder's whole book, filer follows, investigations and the credit balance — sign in over OAuth 2.1 with PKCE and Dynamic Client Registration on the same address; calling one starts it.
 - **Wealth and Mandates** use OAuth 2.1 with PKCE and Dynamic Client Registration. Discovery is open — `initialize`, `tools/list` and `ping` answer without a token, so a client can inspect the surface before anyone signs in. Any `tools/call` without a token answers `401` with an RFC 9728 `WWW-Authenticate` challenge, and a compliant client completes sign-in on its own.
+- **Companies** uses OAuth 2.1 with PKCE and Dynamic Client Registration on the same authorization server as Wealth, and answers nothing without a token: sign in first, then it lists its four tools. Finding a company is free; opening a file uses the account's credits, and a deep file starts only after the user agrees to its price.
 - Your assistant receives a scoped, short-lived token — never your password — and your account's own permissions apply.
 
 ## What this repository is
@@ -109,7 +112,7 @@ CI runs on every push: every JSON file parses, Cursor's own [plugin-template val
 
 ## Registry
 
-All six servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
+Six of the seven servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain (Companies is not in the registry yet):
 
 `ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates` · `ch.antevo/tremor-watch`
 
@@ -117,7 +120,7 @@ All six servers are listed and active in the official MCP Registry under the `ch
 
 ### Do I need an account?
 
-Not for The 07:00 Brief, Executive, Tremor Watch or trademark screening. Wealth needs an [Antevo Wealth](https://antevo.ch/wealth) account; Mandates needs a firm account, [by arrangement](https://antevo.ch/mandate).
+Not for The 07:00 Brief, Executive, Tremor Watch or trademark screening. Wealth needs an [Antevo Wealth](https://antevo.ch/wealth) account; Mandates needs a firm account, [by arrangement](https://antevo.ch/mandate). Companies works with any Antevo account: [antevo.ch/mcp/companies](https://antevo.ch/mcp/companies/).
 
 ### Why is Trademark on a different host?
 
