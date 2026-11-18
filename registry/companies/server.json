@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ch.antevo/companies",
+  "title": "Antevo Companies",
+  "description": "Swiss company files from Zefix and SHAB: group structure, sanctions lists and a watch for changes.",
+  "version": "1.0.0",
+  "websiteUrl": "https://antevo.ch/mcp/companies/",
+  "repository": {
+    "url": "https://github.com/ANTEVO-CH/antevo-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://antevo.ch/assets/antevo-symbol-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.antevo.ch/mcp/companies/mcp"
+    }
+  ]
+}
