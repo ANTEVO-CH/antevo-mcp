@@ -1,8 +1,8 @@
 ![Antevo: a question field cycling through questions your assistant can now answer, beside a lens where signals from the world travel inward to you](assets/cover.svg)
 
-# Antevo MCP: seven remote MCP servers for markets, market stress, trademarks, companies, wealth and mandates
+# Antevo MCP: seven remote MCP servers for markets, market stress, trademarks, the Swiss company register, wealth and mandates
 
-**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the weekly Tremor index, the trademark registers, the public record on a Swiss company, your own household and your firm's client book — seven remote servers over Streamable HTTP. Four need no account. There is nothing to download and nothing to run.
+**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the weekly Tremor index, the trademark registers (Swiss, EU, UK, US and 50+ more), the public record on a Swiss company from the commercial register (Zefix) and the gazette (SHAB/FOSC), your own household and your firm's client book — seven remote servers over Streamable HTTP. Four need no account. There is nothing to download and nothing to run.
 
 [![validate](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-ch.antevo-252c28?labelColor=9b7936)](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo)
@@ -38,11 +38,11 @@
 |:--|:--|:--|:--|--:|
 | **0.** | **The 07:00 Brief** — your agent knows the markets by 07:00, every day: the daily brief, Market Map, Big Picture, Three Minute Brief, Risk Radar and sector notes | `https://api.antevo.ch/mcp/0700/mcp` | Public | 4 |
 | **I.** | **Executive** — the daily editorial read, risk radar, forward calendar, dated archive, desk reads, world-events map, macro-economic history | `https://api.antevo.ch/mcp/executive/mcp` | Public | 15 |
-| **II.** | **Trademark** — screen a name or a whole shortlist, with the companies and domains already registered under each name; read a holder's filing pattern; check an opposition window | `https://trademark.antevo.ch/mcp` | Public screening (5 tools); sign-in for the rest | 16 |
+| **II.** | **Trademark** — screen a name or a whole shortlist across 50+ registers, Swiss, EU, UK and US included, with the companies and domains already registered under each name; read a holder's filing pattern; check an opposition window | `https://trademark.antevo.ch/mcp` | Public screening (5 tools); sign-in for the rest | 16 |
 | **III.** | **Wealth** — your household: holdings, allocation, risk, real assets, liabilities, goals, documents, a one-page map of where your wealth sits and, on Wealth+, succession readiness | `https://api.antevo.ch/mcp/wealth/mcp` | Your account | 41 |
 | **IV.** | **Mandates** — your firm's client book: clients, reviews, meeting briefs, goals, documents, succession | `https://api.antevo.ch/mcp/mandates/mcp` | By arrangement | 24 |
 | **V.** | **Tremor Watch** — how many of 753 market relationships stopped behaving this week: the Antevo Tremor Index against a normal Friday, its seven families, the new breaks, any week's pairs and every reading since 1997 | `https://api.antevo.ch/mcp/tremor/mcp` | Public | 4 |
-| **VI.** | **Companies** — the public record on a Swiss company: the commercial register, the gazette's dated changes, the group structure and sanctions-list checks, every line with its source and date, and a watch for changes. Supports a KYC file; not a KYC check | `https://api.antevo.ch/mcp/companies/mcp` | Any Antevo account | 4 |
+| **VI.** | **Companies** — the public record on a Swiss company: the commercial register (Zefix), the gazette's dated changes (SHAB/FOSC), the group structure and sanctions-list checks, every line with its source and date, and a watch for changes. Supports a KYC file; not a KYC check | `https://api.antevo.ch/mcp/companies/mcp` | Any Antevo account | 4 |
 
 Tool counts are read live from each server's `tools/list` (Companies lists its tools after sign-in). Wealth reads your whole book, and can record holdings you already own — only after you confirm. It never trades, moves money or deletes anything. Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
 
