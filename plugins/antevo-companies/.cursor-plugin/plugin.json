@@ -1,0 +1,16 @@
+{
+  "name": "antevo-companies",
+  "displayName": "Antevo Companies",
+  "version": "1.0.0",
+  "description": "The public record on a Swiss company — register identity from Zefix, the dated changes published in SHAB, the group structure and checks against official sanctions lists, each line with its source and date — and a watch for changes. Signs you in over OAuth 2.1 with any Antevo account. It supports a KYC file; it is not a KYC check.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/mcp"
+  },
+  "license": "MIT",
+  "keywords": ["mcp", "company-register", "switzerland", "zefix", "kyc"],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/mcp/companies/",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

@@ -5,8 +5,8 @@
     "email": "contact@antevo.ch"
   },
   "metadata": {
-    "description": "Antevo's MCP connectors: the morning brief, markets and world risk, the weekly Tremor index, trademark registers, your own portfolio and your firm's client book.",
-    "version": "1.4.0",
+    "description": "Antevo's MCP connectors: the morning brief, markets and world risk, the weekly Tremor index, trademark registers, Swiss company files, your own portfolio and your firm's client book.",
+    "version": "1.5.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
@@ -39,6 +39,11 @@
       "name": "antevo-mandates",
       "source": "antevo-mandates",
       "description": "Your firm's client book — reviews due, meeting briefs, succession, goals and documents. Signs you in over OAuth; can record changes to your own book."
+    },
+    {
+      "name": "antevo-companies",
+      "source": "antevo-companies",
+      "description": "The public record on a Swiss company — Zefix, SHAB, group structure and sanctions lists, each line sourced and dated — and a watch for changes. Signs you in over OAuth with any Antevo account."
     }
   ]
 }

@@ -67,7 +67,7 @@ The brief is out around 07:00 Zurich time; in Asia, pick a time after 14:00 Sing
 | **Claude** — Code, Desktop, claude.ai | `/plugin marketplace add ANTEVO-CH/plugins`, then `/plugin install antevo-executive@antevo` — each connection with its skills. See [ANTEVO-CH/plugins](https://github.com/ANTEVO-CH/plugins). |
 | **Claude** — directory | One click: [The 07:00 Brief](https://claude.ai/directory/the-0700-brief), [Executive](https://claude.ai/directory/antevo-executive-brief), [Tremor Watch](https://claude.ai/directory/antevo-tremor-watch), [Wealth](https://claude.ai/directory/antevo-wealth). |
 | **ChatGPT** — app directory | One click: [Executive](https://chatgpt.com/plugins/plugin_asdk_app_6a989bd098e88191a192cc83b62f186f), [Tremor Watch](https://chatgpt.com/plugins/plugin_asdk_app_6ae1fec5a3f48191a318e2379b27c912), [Trademark](https://chatgpt.com/plugins/plugin_asdk_app_6a98fcb63084819195151bf071f8aa5c), [Wealth](https://chatgpt.com/plugins/plugin_asdk_app_6a9906f1027081918108471ed671995b). Step by step: [antevo.ch/mcp/chatgpt](https://antevo.ch/mcp/chatgpt/). |
-| **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — six plugins, take only what you need. |
+| **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — seven plugins, take only what you need. |
 | **VS Code** | One click from [INSTALL.md](INSTALL.md). |
 | **Gemini CLI** | `gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp` |
 | **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has The 07:00 Brief, Executive, Tremor Watch and Trademark. |
@@ -92,7 +92,7 @@ What has changed at this Swiss company since January?                    → Com
 - **The 07:00 Brief, Executive, Tremor Watch and Trademark screening** need no token. They are rate-limited per client and hold no personal data.
 - **Trademark's other eleven tools** — the watchlist and its conflicts, deadlines, filing activity in a class, a holder's whole book, filer follows, investigations and the credit balance — sign in over OAuth 2.1 with PKCE and Dynamic Client Registration on the same address; calling one starts it.
 - **Wealth and Mandates** use OAuth 2.1 with PKCE and Dynamic Client Registration. Discovery is open — `initialize`, `tools/list` and `ping` answer without a token, so a client can inspect the surface before anyone signs in. Any `tools/call` without a token answers `401` with an RFC 9728 `WWW-Authenticate` challenge, and a compliant client completes sign-in on its own.
-- **Companies** uses OAuth 2.1 with PKCE and Dynamic Client Registration on the same authorization server as Wealth, and answers nothing without a token: sign in first, then it lists its four tools. Finding a company is free; opening a file uses the account's credits, and a deep file starts only after the user agrees to its price.
+- **Companies** uses OAuth 2.1 with PKCE and Dynamic Client Registration on the same authorization server as Wealth. Discovery is open in the same way — `initialize`, `tools/list` and `ping` answer without a token — and any `tools/call` without one answers `401`. Finding a company is free; opening a file uses the account's credits, and a deep file starts only after the user agrees to its price.
 - Your assistant receives a scoped, short-lived token — never your password — and your account's own permissions apply.
 
 ## What this repository is
@@ -102,7 +102,7 @@ Connection metadata, and nothing else. There is no application code, no data and
 | Path | What it is |
 |:--|:--|
 | [`registry/*/server.json`](registry) | Mirrors of the published [MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo) entries |
-| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The six plugins, for the Cursor marketplace |
+| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The seven plugins, for the Cursor marketplace |
 | [`plugins/*/`](plugins) | Each plugin's `.cursor-plugin/plugin.json`, `mcp.json`, README and logo |
 | [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for the four public servers |
 | [`gemini-extension.json`](gemini-extension.json) | Makes this repository a Gemini CLI extension |
@@ -112,7 +112,7 @@ CI runs on every push: every JSON file parses, Cursor's own [plugin-template val
 
 ## Registry
 
-Six of the seven servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain (Companies is not in the registry yet):
+All seven servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
 
 `ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates` · `ch.antevo/tremor-watch` · `ch.antevo/companies`
 
