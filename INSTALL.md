@@ -115,7 +115,7 @@ Add the ones you want to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.jso
 
 ## Gemini CLI
 
-The six registry servers at once, as an extension (add Companies by its address):
+All seven servers at once, as an extension:
 
 ```sh
 gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp

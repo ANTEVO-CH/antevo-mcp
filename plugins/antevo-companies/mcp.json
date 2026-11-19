@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "antevo-companies": {
+      "url": "https://api.antevo.ch/mcp/companies/mcp"
+    }
+  }
+}
