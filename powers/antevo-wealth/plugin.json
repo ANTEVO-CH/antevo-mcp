@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "antevo-wealth",
+  "version": "1.0.0",
+  "description": "Your own household: positions, allocation, AUM, drift, real assets and compliance breaches, a one-page map of where your wealth sits, and on Wealth+ your succession readiness. Signs you in over OAuth 2.1 and reaches your own book and nothing else. It reads your whole book and can record holdings you already own, only after you confirm. It never trades, moves money or deletes anything.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch"
+  },
+  "homepage": "https://antevo.ch/wealth",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "wealth",
+    "portfolio",
+    "net-worth",
+    "allocation",
+    "family-office"
+  ]
+}
