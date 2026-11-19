@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "antevo-mandates",
+  "version": "1.0.0",
+  "description": "Your firm's client book: who is due a review, meeting briefs, succession gaps, goals, documents and client email. Signs you in over OAuth 2.1 and reaches your own firm and nothing else. It can record reviews and update client records; irreversible actions return a plan and run only when you confirm. No tool can place a trade or move money.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch"
+  },
+  "homepage": "https://antevo.ch/mandate",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "wealth-management",
+    "eam",
+    "family-office",
+    "client-book",
+    "advisor"
+  ]
+}

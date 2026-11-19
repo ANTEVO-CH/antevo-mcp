@@ -70,7 +70,7 @@ The brief is out around 07:00 Zurich time; in Asia, pick a time after 14:00 Sing
 | **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — seven plugins, take only what you need. |
 | **VS Code** | One click from [INSTALL.md](INSTALL.md). |
 | **Gemini CLI** | `gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp` |
-| **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has The 07:00 Brief, Executive, Tremor Watch and Trademark. |
+| **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has all seven; Wealth, Mandates and Companies ask you to sign in on first use. |
 | **Windsurf, Zed, Goose, any MCP client** | Paste an address from [the servers](#the-servers) as a remote Streamable HTTP server. |
 | **A terminal** | `npx @antevo/cli brief` — see [ANTEVO-CH/cli](https://github.com/ANTEVO-CH/cli). |
 
@@ -104,7 +104,7 @@ Connection metadata, and nothing else. There is no application code, no data and
 | [`registry/*/server.json`](registry) | Mirrors of the published [MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo) entries |
 | [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The seven plugins, for the Cursor marketplace |
 | [`plugins/*/`](plugins) | Each plugin's `.cursor-plugin/plugin.json`, `mcp.json`, README and logo |
-| [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for the four public servers |
+| [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for all seven servers |
 | [`gemini-extension.json`](gemini-extension.json) | Makes this repository a Gemini CLI extension |
 | [`INSTALL.md`](INSTALL.md) | One-click install links for Cursor and VS Code |
 
