@@ -1,0 +1,25 @@
+{
+  "name": "antevo-strategy-radar",
+  "displayName": "Strategy Radar",
+  "version": "1.0.0",
+  "description": "What changed today for your company's strategy. Every morning Antevo writes a business board: the risks and opportunities for companies from trade, regulation, supply, shipping, energy, demand, currencies, funding, labour, technology, cyber, geopolitics and climate, graded in words with two or three possible responses each. Five setup questions stay in your assistant, which matches the board to your company. Public, read-only, no account. Possible responses, never advice.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/executive/strategy/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "strategy",
+    "risk",
+    "business-intelligence",
+    "supply-chain",
+    "regulation",
+    "geopolitics",
+    "planning"
+  ],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/mcp/strategy/",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

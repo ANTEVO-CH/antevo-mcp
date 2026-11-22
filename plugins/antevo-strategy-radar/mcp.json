@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "antevo-strategy-radar": {
+      "url": "https://api.antevo.ch/mcp/strategy/mcp"
+    }
+  }
+}
