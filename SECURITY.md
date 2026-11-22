@@ -17,6 +17,11 @@ carries personal data or needs an account.
 statistics (shares, correlations, z-scores and percentiles), never price or index levels, and
 carries no personal data or account.
 
+**Strategy Radar** is public and **read-only**. It serves Antevo's daily business board for
+companies and the set-up for matching it in the company's own assistant. Neither tool takes
+company details: the set-up takes nothing and the board takes only a date, so a company's
+answers, objectives and tags never reach Antevo. No personal data and no account.
+
 **Trademark** screening is public and **read-only**: its five public tools read public-register
 data and need no account, and without an account they do not name private individuals who
 filed marks. The same address lists eleven more tools that need OAuth sign-in. Four of them
