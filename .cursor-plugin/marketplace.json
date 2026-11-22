@@ -5,8 +5,8 @@
     "email": "contact@antevo.ch"
   },
   "metadata": {
-    "description": "Antevo's MCP connectors: the morning brief, markets and world risk, the weekly Tremor index, trademark registers, Swiss company files, your own portfolio and your firm's client book.",
-    "version": "1.5.0",
+    "description": "Antevo's MCP connectors: the morning brief, markets and world risk, the weekly Tremor index, a daily business board for company strategy, trademark registers, Swiss company files, your own portfolio and your firm's client book.",
+    "version": "1.6.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
@@ -24,6 +24,11 @@
       "name": "antevo-tremor-watch",
       "source": "antevo-tremor-watch",
       "description": "How many market relationships stopped behaving this week: the weekly Antevo Tremor Index, its seven families, the new breaks and every reading since 1997. Public — no account."
+    },
+    {
+      "name": "antevo-strategy-radar",
+      "source": "antevo-strategy-radar",
+      "description": "What changed today for your company's strategy: a daily business board of risks and opportunities, matched to your company in your own assistant. Public — no account."
     },
     {
       "name": "antevo-trademark",
