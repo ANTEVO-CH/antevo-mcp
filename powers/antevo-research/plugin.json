@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "antevo-research",
+  "version": "1.0.0",
+  "description": "Ask one of Antevo's research desks (economy, geopolitics, shipping, real estate, rates, equities, ETFs, results, Swiss market and more) and get its written answer, with every fact dated. Signs you in with any Antevo account. Research, not advice.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch"
+  },
+  "homepage": "https://antevo.ch/research/",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "markets",
+    "economy",
+    "geopolitics",
+    "switzerland"
+  ]
+}

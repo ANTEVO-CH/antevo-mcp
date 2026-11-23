@@ -1,7 +1,7 @@
 {
   "name": "antevo",
-  "version": "1.6.0",
-  "description": "The 07:00 Brief, markets, world risk, the weekly Tremor index, a business board for company strategy, trademarks, Swiss company files, your own portfolio and your firm's client book — from the Antevo desk.",
+  "version": "1.7.0",
+  "description": "The 07:00 Brief, markets, world risk, the weekly Tremor index, a business board for company strategy, trademarks, Swiss company files, answers from Antevo's research desks, your own portfolio and your firm's client book — from the Antevo desk.",
   "mcpServers": {
     "the-0700-brief": {
       "httpUrl": "https://api.antevo.ch/mcp/0700/mcp"
@@ -26,6 +26,9 @@
     },
     "antevo-companies": {
       "httpUrl": "https://api.antevo.ch/mcp/companies/mcp"
+    },
+    "antevo-research": {
+      "httpUrl": "https://api.antevo.ch/mcp/research/mcp"
     }
   }
 }

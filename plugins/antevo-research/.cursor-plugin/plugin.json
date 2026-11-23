@@ -1,0 +1,22 @@
+{
+  "name": "antevo-research",
+  "displayName": "Antevo Research",
+  "version": "1.0.0",
+  "description": "Ask one of Antevo's research desks (economy, geopolitics, shipping, real estate, rates, equities, ETFs, results, Swiss market and more) and get its written answer, with every fact dated. Signs you in with any Antevo account. Research, not advice.",
+  "author": {
+    "name": "Antevo",
+    "email": "contact@antevo.ch",
+    "url": "https://antevo.ch/mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "research",
+    "markets",
+    "economy",
+    "geopolitics"
+  ],
+  "logo": "assets/logo.png",
+  "homepage": "https://antevo.ch/research/",
+  "repository": "https://github.com/ANTEVO-CH/antevo-mcp"
+}

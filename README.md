@@ -1,8 +1,8 @@
 ![Antevo: a question field cycling through questions your assistant can now answer, beside a lens where signals from the world travel inward to you](assets/cover.svg)
 
-# Antevo MCP: eight remote MCP servers for markets, market stress, company strategy, trademarks, the Swiss company register, wealth and mandates
+# Antevo MCP: nine remote MCP servers for markets, market stress, company strategy, research desks, trademarks, the Swiss company register, wealth and mandates
 
-**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the weekly Tremor index, a daily business board for company strategy, the trademark registers (Swiss, EU, UK, US and 50+ more), the public record on a Swiss company from the commercial register (Zefix) and the gazette (SHAB/FOSC), your own household and your firm's client book — eight remote servers over Streamable HTTP. Five need no account. There is nothing to download and nothing to run.
+**Antevo's connections, for any assistant that speaks MCP.** The 07:00 Brief, the Executive Brief and its dated archive, the weekly Tremor index, a daily business board for company strategy, the trademark registers (Swiss, EU, UK, US and 50+ more), the public record on a Swiss company from the commercial register (Zefix) and the gazette (SHAB/FOSC), written answers from Antevo's research desks, your own household and your firm's client book — nine remote servers over Streamable HTTP. Five need no account. There is nothing to download and nothing to run.
 
 [![validate](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/ANTEVO-CH/antevo-mcp/actions/workflows/validate.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-ch.antevo-252c28?labelColor=9b7936)](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo)
@@ -13,7 +13,7 @@
 ### Why Antevo
 
 - **A named desk, not a web search.** Answers come from Antevo's published Executive Brief, the trademark registers themselves, and — when you sign in — your own record, with the date on every read.
-- **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive, Tremor Watch, Strategy Radar and trademark screening reach no personal data. Wealth, Mandates, Companies and Trademark's signed-in tools use OAuth 2.1 with PKCE.
+- **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive, Tremor Watch, Strategy Radar and trademark screening reach no personal data. Wealth, Mandates, Companies, Research and Trademark's signed-in tools use OAuth 2.1 with PKCE.
 - **Intelligence, not advice.** Nothing here places a trade or moves money.
 
 ![How a question travels: your assistant speaks MCP to four Antevo connections, which draw on the Antevo desk and return an answer with the record behind it](assets/connections.svg)
@@ -44,6 +44,7 @@
 | **V.** | **Tremor Watch** — how many of 753 market relationships stopped behaving this week: the Antevo Tremor Index against a normal Friday, its seven families, the new breaks, any week's pairs and every reading since 1997 | `https://api.antevo.ch/mcp/tremor/mcp` | Public | 4 |
 | **VI.** | **Companies** — the public record on a Swiss company: the commercial register (Zefix), the gazette's dated changes (SHAB/FOSC), the group structure and sanctions-list checks, every line with its source and date, and a watch for changes. Supports a KYC file; not a KYC check | `https://api.antevo.ch/mcp/companies/mcp` | Any Antevo account | 4 |
 | **VII.** | **Strategy Radar** — what changed today for your company's strategy: a daily business board of risks and opportunities across trade, regulation, supply, shipping, energy, demand, currencies, funding, labour, technology, cyber, geopolitics and climate, each with two or three possible responses; five setup questions stay in your assistant, which does the matching | `https://api.antevo.ch/mcp/strategy/mcp` | Public | 2 |
+| **VIII.** | **Research** — put a question to one of eighteen Antevo research desks (economy, geopolitics, shipping, real estate, strategy, commodities, markets, technology, digital assets, health, rates, mortgages, equities, technical, ETFs, results, the Swiss market, private markets) and get the desk's written answer, every fact dated. Research, not advice | `https://api.antevo.ch/mcp/research/mcp` | Any Antevo account | 1 |
 
 Tool counts are read live from each server's `tools/list` (Companies lists its tools after sign-in). Wealth reads your whole book, and can record holdings you already own — only after you confirm. It never trades, moves money or deletes anything. Mandates can also change records in your own firm's book and asks for confirmation before anything irreversible.
 
@@ -68,10 +69,10 @@ The brief is out around 07:00 Zurich time; in Asia, pick a time after 14:00 Sing
 | **Claude** — Code, Desktop, claude.ai | `/plugin marketplace add ANTEVO-CH/plugins`, then `/plugin install antevo-executive@antevo` — each connection with its skills. See [ANTEVO-CH/plugins](https://github.com/ANTEVO-CH/plugins). |
 | **Claude** — directory | One click: [The 07:00 Brief](https://claude.ai/directory/the-0700-brief), [Executive](https://claude.ai/directory/antevo-executive-brief), [Tremor Watch](https://claude.ai/directory/antevo-tremor-watch), [Wealth](https://claude.ai/directory/antevo-wealth). |
 | **ChatGPT** — app directory | One click: [Executive](https://chatgpt.com/plugins/plugin_asdk_app_6a989bd098e88191a192cc83b62f186f), [Tremor Watch](https://chatgpt.com/plugins/plugin_asdk_app_6ae1fec5a3f48191a318e2379b27c912), [Trademark](https://chatgpt.com/plugins/plugin_asdk_app_6a98fcb63084819195151bf071f8aa5c), [Wealth](https://chatgpt.com/plugins/plugin_asdk_app_6a9906f1027081918108471ed671995b). Step by step: [antevo.ch/mcp/chatgpt](https://antevo.ch/mcp/chatgpt/). |
-| **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — eight plugins, take only what you need. |
+| **Cursor** | One click on [antevo.ch/mcp](https://antevo.ch/mcp/#connections), the `mcp.json` in [INSTALL.md](INSTALL.md#cursor), or a plugin from [`plugins/`](plugins) — nine plugins, take only what you need. |
 | **VS Code** | One click from [INSTALL.md](INSTALL.md). |
 | **Gemini CLI** | `gemini extensions install https://github.com/ANTEVO-CH/antevo-mcp` |
-| **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has all eight; Wealth, Mandates and Companies ask you to sign in on first use. |
+| **Kiro** | Powers → Add Custom Power → import from GitHub: [`powers/`](powers) has all nine; Wealth, Mandates, Companies and Research ask you to sign in on first use. |
 | **Windsurf, Zed, Goose, any MCP client** | Paste an address from [the servers](#the-servers) as a remote Streamable HTTP server. |
 | **A terminal** | `npx @antevo/cli brief` — see [ANTEVO-CH/cli](https://github.com/ANTEVO-CH/cli). |
 
@@ -87,6 +88,7 @@ Has anyone filed anything close to "Novara"?                             → Tra
 Where am I concentrated?                                                 → Wealth, after sign-in
 Which clients are due a review this month?                               → Mandates, after sign-in
 What has changed at this Swiss company since January?                    → Companies, after sign-in
+What does the rates desk make of the next SNB decision?                  → Research, after sign-in
 ```
 
 ## Authentication
@@ -95,6 +97,7 @@ What has changed at this Swiss company since January?                    → Com
 - **Trademark's other eleven tools** — the watchlist and its conflicts, deadlines, filing activity in a class, a holder's whole book, filer follows, investigations and the credit balance — sign in over OAuth 2.1 with PKCE and Dynamic Client Registration on the same address; calling one starts it.
 - **Wealth and Mandates** use OAuth 2.1 with PKCE and Dynamic Client Registration. Discovery is open — `initialize`, `tools/list` and `ping` answer without a token, so a client can inspect the surface before anyone signs in. Any `tools/call` without a token answers `401` with an RFC 9728 `WWW-Authenticate` challenge, and a compliant client completes sign-in on its own.
 - **Companies** uses OAuth 2.1 with PKCE and Dynamic Client Registration on the same authorization server as Wealth. Discovery is open in the same way — `initialize`, `tools/list` and `ping` answer without a token — and any `tools/call` without one answers `401`. Finding a company is free; opening a file uses the account's credits, and a deep file starts only after the user agrees to its price.
+- **Research** signs in the same way, on the same authorization server, with any Antevo account, and its discovery is open in the same way. Each `ask_desk` call writes a fresh answer, which can take a minute or two; the same question within a day comes back at once.
 - Your assistant receives a scoped, short-lived token — never your password — and your account's own permissions apply.
 
 ## What this repository is
@@ -104,9 +107,9 @@ Connection metadata, and nothing else. There is no application code, no data and
 | Path | What it is |
 |:--|:--|
 | [`registry/*/server.json`](registry) | Mirrors of the published [MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ch.antevo) entries |
-| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The eight plugins, for the Cursor marketplace |
+| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | The nine plugins, for the Cursor marketplace |
 | [`plugins/*/`](plugins) | Each plugin's `.cursor-plugin/plugin.json`, `mcp.json`, README and logo |
-| [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for all eight servers |
+| [`powers/*/`](powers) | Kiro powers in the [Agent Plugins](https://agent-plugins.org) format: `plugin.json`, `mcp.json` and a README each, for all nine servers |
 | [`gemini-extension.json`](gemini-extension.json) | Makes this repository a Gemini CLI extension |
 | [`INSTALL.md`](INSTALL.md) | One-click install links for Cursor and VS Code |
 
@@ -114,15 +117,15 @@ CI runs on every push: every JSON file parses, Cursor's own [plugin-template val
 
 ## Registry
 
-All eight servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
+All nine servers are listed and active in the official MCP Registry under the `ch.antevo` namespace, verified on the `antevo.ch` domain:
 
-`ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates` · `ch.antevo/tremor-watch` · `ch.antevo/companies` · `ch.antevo/strategy-radar`
+`ch.antevo/0700-brief` · `ch.antevo/executive` · `ch.antevo/trademark` · `ch.antevo/wealth` · `ch.antevo/mandates` · `ch.antevo/tremor-watch` · `ch.antevo/companies` · `ch.antevo/strategy-radar` · `ch.antevo/research`
 
 ## FAQ
 
 ### Do I need an account?
 
-Not for The 07:00 Brief, Executive, Tremor Watch, Strategy Radar or trademark screening. Wealth needs an [Antevo Wealth](https://antevo.ch/wealth) account; Mandates needs a firm account, [by arrangement](https://antevo.ch/mandate). Companies works with any Antevo account: [antevo.ch/mcp/companies](https://antevo.ch/mcp/companies/).
+Not for The 07:00 Brief, Executive, Tremor Watch, Strategy Radar or trademark screening. Wealth needs an [Antevo Wealth](https://antevo.ch/wealth) account; Mandates needs a firm account, [by arrangement](https://antevo.ch/mandate). Companies and Research work with any Antevo account: [antevo.ch/mcp/companies](https://antevo.ch/mcp/companies/), [antevo.ch/research](https://antevo.ch/research/).
 
 ### Why is Trademark on a different host?
 
