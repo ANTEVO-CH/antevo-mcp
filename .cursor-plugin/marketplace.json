@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Antevo's MCP connectors: the morning brief, markets and world risk, the weekly Tremor index, a daily business board for company strategy, trademark registers, Swiss company files, your own portfolio and your firm's client book.",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
@@ -49,6 +49,11 @@
       "name": "antevo-companies",
       "source": "antevo-companies",
       "description": "The public record on a Swiss company — Zefix, SHAB, group structure and sanctions lists, each line sourced and dated — and a watch for changes. Signs you in over OAuth with any Antevo account."
+    },
+    {
+      "name": "antevo-research",
+      "source": "antevo-research",
+      "description": "Ask an Antevo research desk (economy, geopolitics, shipping, rates, equities, ETFs, results, the Swiss market and more) and get its written answer, every fact dated. Signs you in over OAuth with any Antevo account."
     }
   ]
 }

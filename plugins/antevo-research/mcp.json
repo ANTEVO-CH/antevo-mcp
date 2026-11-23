@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "antevo-research": {
+      "url": "https://api.antevo.ch/mcp/research/mcp"
+    }
+  }
+}
