@@ -1,4 +1,7 @@
-![Antevo: a question field cycling through questions your assistant can now answer, beside a lens where signals from the world travel inward to you](assets/cover.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cover-mcp-dark.png">
+  <img alt="Antevo MCP: nine servers, nothing to install. You ask: has anyone filed anything close to Tirano Pay? Antevo answers: no near marks found, and no Swiss company under the name." src="assets/cover-mcp-light.png" width="100%">
+</picture>
 
 # Antevo MCP: nine remote MCP servers for markets, market stress, company strategy, research desks, trademarks, the Swiss company register, wealth and mandates
 
@@ -16,7 +19,10 @@
 - **Public where it can be, permissioned where it matters.** The 07:00 Brief, Executive, Tremor Watch, Strategy Radar and trademark screening reach no personal data. Wealth, Mandates, Companies, Research and Trademark's signed-in tools use OAuth 2.1 with PKCE.
 - **Intelligence, not advice.** Nothing here places a trade or moves money.
 
-![How a question travels: your assistant speaks MCP to four Antevo connections, which draw on the Antevo desk and return an answer with the record behind it](assets/connections.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/engines-dark.png">
+  <img alt="Nine Antevo engines, five without an account: The 07:00 Brief, Executive Brief, Tremor Watch, Strategy Radar and Trademark screening are free; Companies and Research need any Antevo account; Wealth needs your account; Mandates is by arrangement. Each is a remote MCP server with its address." src="assets/engines-light.png" width="100%">
+</picture>
 
 ## Table of Contents
 
